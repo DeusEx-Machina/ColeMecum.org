@@ -4,46 +4,64 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Cole Mecum : Personal Website">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Cole Mecum</title>
+    <meta name="Cole Mecum Personal Website" content="Cole Mecum ">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/blog.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
+    <title>Hello World!</title>
   </head>
-
   <body>
-
+  <div class = "container">
     <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/DeusEx-Machina/PersonalWebsite">View on GitHub</a>
-
-          <h1 id="project_title">Cole Mecum</h1>
-          <h2 id="project_tagline">Personal Website</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/DeusEx-Machina/PersonalWebsite/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/DeusEx-Machina/PersonalWebsite/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+    <div class="blog-header">
+        <header>
+          <span>
+          	<h1 class="blog-title">Cole Mecum</h1>
+          	<p class = "lead blog-description">Blog stuff</p>
+          </span>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>This is my site. </p>
-      </section>
-    </div>
+    <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">Hello World</h2>
+            <p class="blog-post-meta">May 1st, 2015</p>
+
+            <p>Hey! If  you're reading this right now, congratulations! and welcome to my blog. After self teaching myself some basics about web development I have finally taken the step and got my own personal website.</p>
+            <hr>
+
+            <h2>Setting it up</h2>
+            <p>Getting online with my own domain wasn't easy. If you're like me then you know that the most difficult part of any project is getting it set up so the computer will agree with what it is that you are trying to accomplish. Thankfully <a href = "https://pages.github.com">GitHub Pages</a> is a thing  and is free so webhosting is pretty much taken care of! Also purchasing a domain name is not required (GitHub Pages will publish your site to <usernamegoeshere>.github.io. Ain't that nifty?</p>
+            <h3>Customizing my site</h3>
+            <p>There is this nasty little rumor that web developing is not real programming. I think they're right. Anyone who has tried implementing their own custom CSS for a site will know that web development is an art (at least the CSS part). I am not an artist. Luckily for people like me there exists frameworks to help make websites and make them look awesome. I am a fan of <a href = "http://www.getbootstrap.com">Bootstrap</a> personally. It has a grid layout which is common these days. What sets Bootstrap apart from other existing CSS frameworks is the aditional themes that are provided via <a href = "http://www.bootswatch.com">Bootswatch</a>.</p>
+            <hr>
+            <p>Other than that I have been tweaking little things here and there to help make this site how I want to. Also one day I might do something crazy and add some sort of easter egg game or something. It's a work in progress but it is <strong><I>my</I></strong> work in progress... so stay tuned!</p>
+          </div><!-- /.blog-post -->
+
+        </div><!-- /.blog-main -->
+
+      </div>
 
     <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Cole Mecum maintained by <a href="https://github.com/DeusEx-Machina">DeusEx-Machina</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+    <hr>
+    <div class="row">
+      <footer class="inner container">
+      	<div class = "col-lg-12">
+      		<span>
+      		<ul class = "list-inline">
+	      		<li><a href= "www.linkedin.com/in/cdmecum">LinkedIn</a></li>
+	      		<li><a href= "www.twitter.com/itKindOfWorks">Twitter</a></li>
+	      		<li><a href= "mailto:mecum.cole@gmail.com?subject=Sweet Website">Email</a></li>
+	      		<li><a href= "https://github.com/DeusEx-Machina/PersonalWebsite">GitHub</a></li>	
+      		</ul>
+      	</div>
       </footer>
     </div>
 
     
-
+    </div>
   </body>
 </html>
