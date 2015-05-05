@@ -11,14 +11,14 @@
   </head>
 
   <body>
-  <div class = "container">
+  <div>
   <div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav">
           <a class="blog-nav-item active" href="#">Home</a>
+          <a class="blog-nav-item" href="#">Blog</a>
           <a class="blog-nav-item" href="#">About</a>
-          <a class="blog-nav-item" href="#">Employers</a>
-          <a class="blog-nav-item" href="#">Examples</a>
+          <a class="blog-nav-item" href="#">Random</a>
         </nav>
       </div>
     </div>
@@ -31,8 +31,8 @@
     <div class="blog-header">
         <header>
           <span>
-          	<h1 class="blog-title">Cole Mecum</h1>
-          	<p class = "lead blog-description">Blog stuff</p>
+          	<h1 class="blog-title">Cole's Blog</h1>
+          	<p class = "lead blog-description">Twitter without the character limit</p>
           </span>
         </header>
     </div>
@@ -50,7 +50,7 @@
             <hr>
 
             <h2>Setting it up</h2>
-            <p>Getting online with my own domain wasn't easy. If you're like me then you know that the most difficult part of any project is getting it set up so the computer will agree with what it is that you are trying to accomplish. Thankfully <a href = "https://pages.github.com">GitHub Pages</a> is a thing  and is free so webhosting is pretty much taken care of! Also purchasing a domain name is not required (GitHub Pages will publish your site to <usernamegoeshere>.github.io. Ain't that nifty?</p>
+            <p>Getting online with my own domain wasn't easy. If you're like me then you know that the most difficult part of any project is getting it set up so the computer will agree with what it is that you are trying to accomplish. Thankfully <a href = "https://pages.github.com">GitHub Pages</a> is a thing  and is free so webhosting is pretty much taken care of! Also purchasing a domain name is not required since GitHub Pages will publish your site to <usernamegoeshere>.github.io. Ain't that nifty?</p>
             <h3>Customizing my site</h3>
             <p>There is this nasty little rumor that web developing is not real programming. I think they're right. Anyone who has tried implementing their own custom CSS for a site will know that web development is an art (at least the CSS part). I am not an artist. Luckily for people like me there exists frameworks to help make websites and make them look awesome. I am a fan of <a href = "http://www.getbootstrap.com">Bootstrap</a> personally. It has a grid layout which is common these days. What sets Bootstrap apart from other existing CSS frameworks is the aditional themes that are provided via <a href = "http://www.bootswatch.com">Bootswatch</a>.</p>
             <hr>
@@ -59,20 +59,35 @@
 
         </div><!-- /.blog-main -->
 
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>My name is Cole. This is where I would put something but I really do not know what to put</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">March 2014</a></li>
+              <li><a href="#">February 2014</a></li>
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+            </ol>
+          </div>
+        </div>
+
       </div>
 
     <!-- FOOTER  -->
     <hr>
-    <div class="row">
-      <footer class="inner container">
-      	<div class = "col-lg-12">
+    <div class="container">
+      <footer>
+          <a href="#" class="pull-right">Back to top</a>
       		<ul class = "list-inline">
-	      		<li><a href= "www.linkedin.com/in/cdmecum">LinkedIn</a></li>
-	      		<li><a href= "www.twitter.com/itKindOfWorks">Twitter</a></li>
+	      		<li><a href= "https://www.linkedin.com/in/cdmecum">LinkedIn</a></li>
+            <li><a href= "https://github.com/DeusEx-Machina/PersonalWebsite">GitHub</a></li>  
+	      		<li><a href= "https://www.twitter.com/itKindOfWorks">Twitter</a></li>
 	      		<li><a href= "mailto:mecum.cole@gmail.com?subject=Sweet Website">Email</a></li>
-	      		<li><a href= "https://github.com/DeusEx-Machina/PersonalWebsite">GitHub</a></li>	
       		</ul>
-      	</div>
       </footer>
     </div>
 
