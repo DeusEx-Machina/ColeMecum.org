@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app>
+<html ng-app = "angularDemo">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -54,7 +54,7 @@
 <div class = "container">
 <div class="row">
 
-    <div ng-controller="TodoCtrl">
+    <div ng-controller="todoCtrl">
         <h2>Number of todos: {{getTotalTodos()}}</h2>
         <ul>
             <li ng-repeat="todo in todos">
