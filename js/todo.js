@@ -4,28 +4,6 @@
 var AngularDemo = angular.module('angularDemo',[]);
 
 
-AngularDemo.controller('todoCtrl', ['$scope', function($scope){
-    $scope.getTotalTodos = function(){
-        return $scope.todos.length
-    }
-
-    $scope.todos = [{text:'Learn AngularJS', done:false},
-        {text:'build an app', done:false}]
-
-    $scope.addTodo = function(){
-
-        $scope.todos.push({text:$scope.formTodoText, done:false});
-        $scope.formTodoText ='';
-    }
-
-    $scope.clearCompleted = function(){
-        $scope.todos = _.filter($scope.todos, function(todo){
-            return !todo.done;
-        })
-    }
-}]);
-
-
 AngularDemo.controller('snakeCtrl', ['$scope', function($scope){
     //game control logic goes here
 

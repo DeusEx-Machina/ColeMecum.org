@@ -1,0 +1,29 @@
+
+
+<div class="container">
+    <h2>Angular.JS</h2>
+    <hr>
+    <p>Aside from this whole entire website being run on the angular.js framework. Here is a todo list app I created using angular</p>
+    <br>
+
+
+    <div ng-controller="todoCtrl">
+        <h4>Number of todos: {{getTotalTodos()}}</h4>
+        <ul>
+            <li ng-repeat="todo in todos">
+                <input type="checkbox" ng-model="todo.done">
+                <span class = "done-{{todo.done}}">{{todo.text}}</span>
+            </li>
+        </ul>
+
+        <form>
+            <span>
+                <input type="text" ng-model="formTodoText" ng-model-instant>
+                <button class="btn btn-group" ng-click="addTodo()">Add</button>
+                <button class = "btn-danger btn-group" ng-click="clearCompleted()">Clear Completed</button>
+            </span>
+
+        </form>
+
+    </div>
+</div>
