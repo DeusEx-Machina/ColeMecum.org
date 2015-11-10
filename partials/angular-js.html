@@ -1,25 +1,27 @@
-
-
 <div class="container">
-    <h2>Angular.JS</h2>
-    <hr>
-    <p>Aside from this whole entire website being run on the angular.js framework. Here is a todo list app I created using angular</p>
-    <br>
-    <div ng-controller="todoCtrl">
-        <h4>Number of todos: {{getTotalTodos()}}</h4>
-        <ul>
-            <li ng-repeat="todo in todos">
-                <input type="checkbox" ng-model="todo.done">
-                <span class = "done-{{todo.done}}">{{todo.text}}</span>
-            </li>
-        </ul>
-        <form>
-            <span>
-                <input type="text" ng-model="formTodoText" ng-model-instant>
-                <button class="btn btn-group" ng-click="addTodo()">Add</button>
-                <button class = "btn-danger btn-group" ng-click="clearCompleted()">Clear Completed</button>
-            </span>
-        </form>
+    <div id="todoList"  ng-controller="todoCtrl">
+        <h2>Angular.JS</h2>
+        <hr>
+        <p>Aside from this whole entire website being run on the angular.js framework. Here is a todo list app I created
+            using angular</p>
+        <br>
+
+        <div>
+            <h4>Number of todos: {{getTotalTodos()}}</h4>
+            <ul>
+                <li ng-repeat="todo in todos">
+                    <input type="checkbox" ng-model="todo.done">
+                    <span class="done-{{todo.done}}">{{todo.text}}</span>
+                </li>
+            </ul>
+            <form>
+                <span>
+                    <input type="text" ng-model="formTodoText" ng-model-instant>
+                    <button class="btn btn-group" ng-click="addTodo()">Add</button>
+                    <button class="btn-danger btn-group" ng-click="clearCompleted()">Clear Completed</button>
+                </span>
+            </form>
+        </div>
     </div>
     <!-- end To do list-->
 
@@ -27,9 +29,19 @@
 
 
     <!-- Begin Google Maps-->
-    <h3>Find the Closest Radio Shack</h3>
-    <p>Often times in my life I find that I really need to get to an electronics store but I just can't find one. Problem solved.</p>
-    <div id="map-canvas"></div>
+
+    <div id="budget" ng-controller="budget">
+        <h3>Budget</h3>
+        <p>Know where every Dollar Goes! an example Front end budget thing</p>
+
+
+        <form>
+            <label for="monthlyIncome">Monthly Income</label>
+            <input id='monthlyIncome' type="text" ng-model="monthlyIncome">
+
+
+        </form>
+    </div>
 </div>
 
 
