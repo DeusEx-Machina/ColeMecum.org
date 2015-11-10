@@ -7,7 +7,7 @@ var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
-        when('/', {templateUrl: 'partials/websiteList.html', controller: 'viewCtrl'}).
+        when('#/', {templateUrl: 'partials/websiteList.html', controller: 'viewCtrl'}).
         when('/angular-js', {templateUrl: "partials/angular-js.html", controller: 'todoCtrl'}).
         when('/aboutme', {templateUrl: "partials/aboutme.html", controller: 'viewCtrl'}).
         when('/python', {templateUrl: "partials/python.html", controller: 'viewCtrl'}).

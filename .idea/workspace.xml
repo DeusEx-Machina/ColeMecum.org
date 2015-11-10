@@ -2,46 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3613e6f-9bc5-4c13-9e64-1b313ac8b163" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resume.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/Citizen-Shield.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/top-gun.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/utilityconnect-color.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/images/award.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/images/background.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/images/background2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/images/bag.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/images/cardboard_bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/images/coupon.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/images/final.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/images/header.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/images/headerLogo.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/images/headerSlogan.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/images/headerlogo2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/images/ticket.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/partials/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/accessform.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/accessform.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/blog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/form-complete.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/starbuzz.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/styledform.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/starbuzz/styledform.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/app.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/blog.css" afterPath="$PROJECT_DIR$/src/css/blog.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/bootstrap.css" afterPath="$PROJECT_DIR$/src/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/npm.js" afterPath="$PROJECT_DIR$/src/js/npm.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/todo.js" afterPath="$PROJECT_DIR$/src/js/todo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/angular-js.html" afterPath="$PROJECT_DIR$/partials/angular-js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/blog.html" afterPath="$PROJECT_DIR$/partials/blog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/websiteList.html" afterPath="$PROJECT_DIR$/partials/websiteList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/app.js" afterPath="$PROJECT_DIR$/src/js/app.js" />
     </list>
     <ignored path="PersonalWebsite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/src/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+              <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
               <folding>
                 <element signature="e#0#44#0" expanded="false" />
               </folding>
@@ -74,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="websiteList.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="websiteList.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partials/websiteList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3599114">
-              <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+            <state vertical-scroll-proportion="-7.5384617">
+              <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -94,18 +58,18 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.038462">
-              <caret line="141" column="31" selection-start-line="141" selection-start-column="31" selection-end-line="141" selection-end-column="31" />
+            <state vertical-scroll-proportion="-5.8846154">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.461538">
-              <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.26020408">
+              <caret line="61" column="57" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#h5#0;n#span#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -147,14 +111,15 @@
         <option value="$PROJECT_DIR$/js/todo.js" />
         <option value="$PROJECT_DIR$/partials/error.html" />
         <option value="$PROJECT_DIR$/partials/aboutme.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/partials/blog.html" />
         <option value="$PROJECT_DIR$/partials/angular-js.html" />
         <option value="$PROJECT_DIR$/partials/home.html" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/src/css/style.css" />
+        <option value="$PROJECT_DIR$/src/js/app.js" />
         <option value="$PROJECT_DIR$/partials/websiteList.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -209,6 +174,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PersonalWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersonalWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersonalWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersonalWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersonalWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -329,17 +322,35 @@
       <option name="project" value="LOCAL" />
       <updated>1447122667947</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Made Portfolio the homepage and added 3 websites to it.">
+      <created>1447122727931</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1447122727931</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed error">
+      <created>1447123179648</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1447123179648</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed error">
+      <created>1447123198770</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1447123198770</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.175" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.49791667" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -389,7 +400,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed Error" />
     <MESSAGE value="Made Portfolio the homepage and added 3 websites to it." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made Portfolio the homepage and added 3 websites to it." />
+    <MESSAGE value="Fixed error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -764,27 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.461538">
-          <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h5#0;n#span#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/img/utilityconnect-color.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -817,17 +808,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.038462">
-          <caret line="141" column="31" selection-start-line="141" selection-start-column="31" selection-end-line="141" selection-end-column="31" />
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/websiteList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3599114">
-          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+        <state vertical-scroll-proportion="-7.5384617">
+          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26020408">
+          <caret line="61" column="57" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h5#0;n#span#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
