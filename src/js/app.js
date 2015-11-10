@@ -3,7 +3,7 @@
  */
 'use strict';
 
-var myApp = angular.module('myApp', ['ngRoute'])
+var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
@@ -33,7 +33,7 @@ myApp.controller('todoCtrl', ['$scope', function ($scope) {
         {text: "make a website", done: true},
         {text: 'Learn AngularJS', done: true},
         {text: 'build an app', done: true},
-        {text: "make money off said app", done: false}]
+        {text: "make money off said app", done: false}];
 
     $scope.addTodo = function () {
         $scope.todos.push({text: $scope.formTodoText, done: false});
@@ -50,7 +50,7 @@ myApp.controller('todoCtrl', ['$scope', function ($scope) {
     }
 }]);
 
-myApp.controller('finance', function($scope){
+myApp.controller('finance', ['$scope', function($scope){
     $scope.monthlyIncome = 0;
 
     $scope.budget = [{item:'Housing', allowance:500, spending: 500}]; //array of budget fields that will go like {field: 'food', allowance: 10, actual: 15;}
@@ -66,4 +66,4 @@ myApp.controller('finance', function($scope){
     }
 
 
-});
+}]);
