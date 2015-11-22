@@ -75,7 +75,7 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
             url: 'proxy.php',
             address:'http://klingon.angeldsis.com/usyn/index/fetchtech?playerid=' + playerID
         }).then(function success(response){
-            console.log('Success!')
+            console.log(response)
 
         }, function error(response){
             console.log('Error in getting response : ', response);
