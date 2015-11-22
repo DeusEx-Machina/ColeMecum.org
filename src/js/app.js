@@ -72,8 +72,8 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
     $scope.getPlayerTech = function(playerID){
         $http({
             method:'GET',
-            url: 'http://klingon.angeldsis.com/usyn/index/fetchtech?playerid=' + playerID,
-            dataType:'jsonp'
+            url: 'proxy.php',
+            address:'http://klingon.angeldsis.com/usyn/index/fetchtech?playerid=' + playerID
         }).then(function success(response){
             console.log('Success!')
 
