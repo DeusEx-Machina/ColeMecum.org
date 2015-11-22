@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3613e6f-9bc5-4c13-9e64-1b313ac8b163" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/app.js" afterPath="$PROJECT_DIR$/src/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy.php" afterPath="$PROJECT_DIR$/proxy.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PersonalWebsite.iws" />
@@ -27,8 +27,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27537796">
-              <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.63174945">
+              <caret line="96" column="43" selection-start-line="96" selection-start-column="43" selection-end-line="96" selection-end-column="43" />
               <folding>
                 <element signature="e#0#44#0" expanded="false" />
                 <element signature="e#1116#1867#0" expanded="false" />
@@ -411,7 +411,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448226547463</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Proxy fixes">
+      <created>1448226883595</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1448226883595</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -475,7 +481,8 @@
     <MESSAGE value="Fixed error" />
     <MESSAGE value="Minor Spelling changes, modified the navbar for the time being" />
     <MESSAGE value="Proxy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Proxy" />
+    <MESSAGE value="Proxy fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proxy fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -882,8 +889,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27537796">
-          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.63174945">
+          <caret line="96" column="43" selection-start-line="96" selection-start-column="43" selection-end-line="96" selection-end-column="43" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
             <element signature="e#1116#1867#0" expanded="false" />
