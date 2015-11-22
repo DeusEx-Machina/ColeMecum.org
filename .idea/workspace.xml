@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3613e6f-9bc5-4c13-9e64-1b313ac8b163" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy.php" afterPath="$PROJECT_DIR$/proxy.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/app.js" afterPath="$PROJECT_DIR$/src/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -28,14 +27,14 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25917926">
-              <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.30777538">
+              <caret line="76" column="25" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
               <folding>
                 <element signature="e#0#44#0" expanded="false" />
                 <element signature="e#1116#1867#0" expanded="false" />
                 <element signature="e#1930#2468#0" expanded="false" />
-                <element signature="e#3854#4393#0" expanded="false" />
-                <element signature="e#4423#8007#0" expanded="false" />
+                <element signature="e#3892#4431#0" expanded="false" />
+                <element signature="e#4461#8045#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -400,7 +399,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448226243846</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Proxy">
+      <created>1448226439477</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1448226439477</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -502,8 +507,8 @@
             <element signature="e#0#44#0" expanded="false" />
             <element signature="e#1116#1867#0" expanded="false" />
             <element signature="e#1930#2468#0" expanded="false" />
-            <element signature="e#3854#4393#0" expanded="false" />
-            <element signature="e#4423#8007#0" expanded="false" />
+            <element signature="e#3892#4431#0" expanded="false" />
+            <element signature="e#4461#8045#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -558,8 +563,8 @@
             <element signature="e#0#44#0" expanded="false" />
             <element signature="e#1116#1867#0" expanded="false" />
             <element signature="e#1930#2468#0" expanded="false" />
-            <element signature="e#3854#4393#0" expanded="false" />
-            <element signature="e#4423#8007#0" expanded="false" />
+            <element signature="e#3892#4431#0" expanded="false" />
+            <element signature="e#4461#8045#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -607,8 +612,8 @@
             <element signature="e#0#44#0" expanded="false" />
             <element signature="e#1116#1867#0" expanded="false" />
             <element signature="e#1930#2468#0" expanded="false" />
-            <element signature="e#3854#4393#0" expanded="false" />
-            <element signature="e#4423#8007#0" expanded="false" />
+            <element signature="e#3892#4431#0" expanded="false" />
+            <element signature="e#4461#8045#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -642,8 +647,8 @@
             <element signature="e#0#44#0" expanded="false" />
             <element signature="e#1116#1867#0" expanded="false" />
             <element signature="e#1930#2468#0" expanded="false" />
-            <element signature="e#3854#4393#0" expanded="false" />
-            <element signature="e#4423#8007#0" expanded="false" />
+            <element signature="e#3892#4431#0" expanded="false" />
+            <element signature="e#4461#8045#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -677,8 +682,8 @@
             <element signature="e#0#44#0" expanded="false" />
             <element signature="e#1116#1867#0" expanded="false" />
             <element signature="e#1930#2468#0" expanded="false" />
-            <element signature="e#3854#4393#0" expanded="false" />
-            <element signature="e#4423#8007#0" expanded="false" />
+            <element signature="e#3892#4431#0" expanded="false" />
+            <element signature="e#4461#8045#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -871,14 +876,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25917926">
-          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.30777538">
+          <caret line="76" column="25" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
             <element signature="e#1116#1867#0" expanded="false" />
             <element signature="e#1930#2468#0" expanded="false" />
-            <element signature="e#3854#4393#0" expanded="false" />
-            <element signature="e#4423#8007#0" expanded="false" />
+            <element signature="e#3892#4431#0" expanded="false" />
+            <element signature="e#4461#8045#0" expanded="false" />
           </folding>
         </state>
       </provider>
