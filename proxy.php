@@ -1,5 +1,5 @@
 <?php 
 
-echo file_get_contents($_POST['address']);
-echo 'yes';
+$response = http_get($_POST['address'], array("timeout"=>1), $info);
+print_r($info);
 ?>
