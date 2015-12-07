@@ -7,13 +7,13 @@ var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
-        when('#/', {templateUrl: 'partials/battleCalc.html', controller: 'battleCalc'}).
+        when('/', {templateUrl: 'partials/websiteList.html', controller: 'viewCtrl'}).
         when('/angular-js', {templateUrl: "partials/angular-js.html", controller: 'todoCtrl'}).
         when('/aboutme', {templateUrl: "partials/aboutme.html", controller: 'viewCtrl'}).
         when('/python', {templateUrl: "partials/python.html", controller: 'viewCtrl'}).
         when('/Java', {templateUrl: "partials/java.html", controller: 'viewCtrl'}).
         when('/websiteList', {templateUrl: "partials/websiteList.html", controller: 'viewCtrl'}).
-        otherwise({templateUrl: "partials/battleCalc.html", controller: 'battleCalc'})
+        otherwise({templateUrl: "partials/error.html", controller: 'battleCalc'})
     }])
 
     //view controller
