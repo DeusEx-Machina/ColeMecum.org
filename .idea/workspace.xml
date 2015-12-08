@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3613e6f-9bc5-4c13-9e64-1b313ac8b163" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/battleCalc.html" afterPath="$PROJECT_DIR$/partials/battleCalc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/blog.html" afterPath="$PROJECT_DIR$/partials/blog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/websiteList.html" afterPath="$PROJECT_DIR$/partials/websiteList.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/app.js" afterPath="$PROJECT_DIR$/src/js/app.js" />
     </list>
     <ignored path="PersonalWebsite.iws" />
@@ -57,29 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="382" column="27" selection-start-line="382" selection-start-column="27" selection-end-line="382" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#44#0" expanded="false" />
-                <element signature="e#1283#2034#0" expanded="false" />
-                <element signature="e#2097#2635#0" expanded="false" />
-                <element signature="e#2968#3365#0" expanded="false" />
-                <element signature="e#5007#8591#0" expanded="false" />
-                <element signature="e#8625#10003#0" expanded="false" />
-                <element signature="e#10336#10338#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="battleCalc.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/partials/battleCalc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63295454">
-              <caret line="216" column="55" selection-start-line="216" selection-start-column="55" selection-end-line="216" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.51704544">
+              <caret line="264" column="42" selection-start-line="264" selection-start-column="42" selection-end-line="264" selection-end-column="42" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
@@ -89,7 +67,24 @@
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h3#0;n#div#1;n#div#1;n#form#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#2;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="136" column="16" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#44#0" expanded="false" />
+                <element signature="e#4249#5020#0" expanded="false" />
+                <element signature="e#5243#8828#0" expanded="false" />
+                <element signature="e#8862#10299#0" expanded="false" />
+                <element signature="e#10519#10764#0" expanded="false" />
+                <element signature="e#13933#13935#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -195,6 +190,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PersonalWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersonalWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersonalWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersonalWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersonalWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -369,7 +396,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449532178656</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixed issue with battle calc modifiers not updating the units fields. added attacker and defender level. cosmetic changes.">
+      <created>1449567271981</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1449567271981</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -433,7 +466,8 @@
     <MESSAGE value="Fixed error" />
     <MESSAGE value="Minor Spelling changes, modified the navbar for the time being" />
     <MESSAGE value="random" />
-    <option name="LAST_COMMIT_MESSAGE" value="random" />
+    <MESSAGE value="Fixed issue with battle calc modifiers not updating the units fields. added attacker and defender level. cosmetic changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issue with battle calc modifiers not updating the units fields. added attacker and defender level. cosmetic changes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -469,12 +503,11 @@
           <caret line="75" column="65" selection-start-line="75" selection-start-column="65" selection-end-line="75" selection-end-column="65" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#1283#2034#0" expanded="false" />
-            <element signature="e#2097#2635#0" expanded="false" />
-            <element signature="e#2968#3365#0" expanded="false" />
-            <element signature="e#5007#8591#0" expanded="false" />
-            <element signature="e#8625#10003#0" expanded="false" />
-            <element signature="e#10336#10338#0" expanded="false" />
+            <element signature="e#4249#5020#0" expanded="false" />
+            <element signature="e#5243#8828#0" expanded="false" />
+            <element signature="e#8862#10299#0" expanded="false" />
+            <element signature="e#10519#10764#0" expanded="false" />
+            <element signature="e#13933#13935#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -527,12 +560,11 @@
           <caret line="75" column="65" selection-start-line="75" selection-start-column="65" selection-end-line="75" selection-end-column="65" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#1283#2034#0" expanded="false" />
-            <element signature="e#2097#2635#0" expanded="false" />
-            <element signature="e#2968#3365#0" expanded="false" />
-            <element signature="e#5007#8591#0" expanded="false" />
-            <element signature="e#8625#10003#0" expanded="false" />
-            <element signature="e#10336#10338#0" expanded="false" />
+            <element signature="e#4249#5020#0" expanded="false" />
+            <element signature="e#5243#8828#0" expanded="false" />
+            <element signature="e#8862#10299#0" expanded="false" />
+            <element signature="e#10519#10764#0" expanded="false" />
+            <element signature="e#13933#13935#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -578,12 +610,11 @@
           <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#1283#2034#0" expanded="false" />
-            <element signature="e#2097#2635#0" expanded="false" />
-            <element signature="e#2968#3365#0" expanded="false" />
-            <element signature="e#5007#8591#0" expanded="false" />
-            <element signature="e#8625#10003#0" expanded="false" />
-            <element signature="e#10336#10338#0" expanded="false" />
+            <element signature="e#4249#5020#0" expanded="false" />
+            <element signature="e#5243#8828#0" expanded="false" />
+            <element signature="e#8862#10299#0" expanded="false" />
+            <element signature="e#10519#10764#0" expanded="false" />
+            <element signature="e#13933#13935#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -615,12 +646,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#1283#2034#0" expanded="false" />
-            <element signature="e#2097#2635#0" expanded="false" />
-            <element signature="e#2968#3365#0" expanded="false" />
-            <element signature="e#5007#8591#0" expanded="false" />
-            <element signature="e#8625#10003#0" expanded="false" />
-            <element signature="e#10336#10338#0" expanded="false" />
+            <element signature="e#4249#5020#0" expanded="false" />
+            <element signature="e#5243#8828#0" expanded="false" />
+            <element signature="e#8862#10299#0" expanded="false" />
+            <element signature="e#10519#10764#0" expanded="false" />
+            <element signature="e#13933#13935#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -652,12 +682,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#1283#2034#0" expanded="false" />
-            <element signature="e#2097#2635#0" expanded="false" />
-            <element signature="e#2968#3365#0" expanded="false" />
-            <element signature="e#5007#8591#0" expanded="false" />
-            <element signature="e#8625#10003#0" expanded="false" />
-            <element signature="e#10336#10338#0" expanded="false" />
+            <element signature="e#4249#5020#0" expanded="false" />
+            <element signature="e#5243#8828#0" expanded="false" />
+            <element signature="e#8862#10299#0" expanded="false" />
+            <element signature="e#10519#10764#0" expanded="false" />
+            <element signature="e#13933#13935#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -856,23 +885,22 @@
     <entry file="file://$PROJECT_DIR$/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="382" column="27" selection-start-line="382" selection-start-column="27" selection-end-line="382" selection-end-column="27" />
+          <caret line="136" column="16" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="16" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#1283#2034#0" expanded="false" />
-            <element signature="e#2097#2635#0" expanded="false" />
-            <element signature="e#2968#3365#0" expanded="false" />
-            <element signature="e#5007#8591#0" expanded="false" />
-            <element signature="e#8625#10003#0" expanded="false" />
-            <element signature="e#10336#10338#0" expanded="false" />
+            <element signature="e#4249#5020#0" expanded="false" />
+            <element signature="e#5243#8828#0" expanded="false" />
+            <element signature="e#8862#10299#0" expanded="false" />
+            <element signature="e#10519#10764#0" expanded="false" />
+            <element signature="e#13933#13935#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/battleCalc.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63295454">
-          <caret line="216" column="55" selection-start-line="216" selection-start-column="55" selection-end-line="216" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.51704544">
+          <caret line="264" column="42" selection-start-line="264" selection-start-column="42" selection-end-line="264" selection-end-column="42" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
@@ -882,7 +910,7 @@
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h3#0;n#div#1;n#div#1;n#form#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#2;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

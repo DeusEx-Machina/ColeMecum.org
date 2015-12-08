@@ -8,7 +8,7 @@ var myApp = angular.module('myApp', ['ngRoute']);
 myApp.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
         when('/', {templateUrl: 'partials/websiteList.html', controller: 'viewCtrl'}).
-            //when('/blog', {templateUrl: 'partials/blog.html'} controller)
+        //when('/blog', {templateUrl: 'partials/blog.html'} controller)
         when('/battleCalc', {templateUrl: 'partials/battleCalc.html', controller: 'battleCalc'}).
         when('/angular-js', {templateUrl: "partials/angular-js.html", controller: 'todoCtrl'}).
         when('/aboutme', {templateUrl: "partials/aboutme.html", controller: 'viewCtrl'}).
@@ -52,7 +52,7 @@ myApp.controller('todoCtrl', ['$scope', function ($scope) {
     }
 }]);
 
-myApp.controller('finance', ['$scope',  function ($scope) {
+myApp.controller('finance', ['$scope', function ($scope) {
     $scope.monthlyIncome = 0;
 
     $scope.budget = [{item: 'Housing', allowance: 500, spending: 500}]; //array of budget fields that will go like {field: 'food', allowance: 10, actual: 15;}
@@ -71,17 +71,17 @@ myApp.controller('finance', ['$scope',  function ($scope) {
 myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
     //http://klingon.angeldsis.com/usyn/index/fetchtech?playerid=0932
     // returns {"data":{"armor":24,"laser":23,"missile":21,"plasma":15,"shield":14,"ion":13,"photon":8,"disruptor":3},"nick":"rabbit"}
-    $scope.getPlayerTech = function(playerID){
+    $scope.getPlayerTech = function (playerID) {
         $http({
-            method:'POST',
+            method: 'POST',
             url: 'proxy.php',
-            data:{
+            data: {
                 address: 'http://klingon.angeldsis.com/usyn/index/fetchtech?playerid=932'
             }
-        }).then(function success(response){
+        }).then(function success(response) {
             console.log(response)
 
-        }, function error(response){
+        }, function error(response) {
             console.log('Error in getting response : ', response);
         })
     };
@@ -89,52 +89,60 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
 
     $scope.attacker = {
         id: 0,
-        level:0,
-        fleet:{
+        level: 0,
+        fleet: {
             fighter: 1000,
             frigate: 250
         },
 
         tech: {
-            Armor: {name:'Armor', level:0, modifier: 1.00},
-            Laser: {name:'Laser', level:0, modifier: 1.00},
-            Missiles:{ name:'Missiles', level:0 , modifier: 1.00},
-            Plasma:{ name:'Plasma', level:0, modifier: 1.00},
-            Shielding:{ name:'Shielding', level:0, modifier: 1.00},
-            Ion:{ name:'Ion', level:0, modifier: 1.00},
-            Photon:{ name:'Photon', level:0, modifier: 1.00},
-            Disruptor:{ name:'Disruptor', level:0, modifier: 1.00},
-            CommandCenter:{ name:'Command Center', level:0, modifier: 1.00},
-            TacticalCommander:{ name:'Tactical Commander', level:0, modifier: 1.00}
+            Armor: {name: 'Armor', level: 0, modifier: 1.00},
+            Laser: {name: 'Laser', level: 0, modifier: 1.00},
+            Missiles: {name: 'Missiles', level: 0, modifier: 1.00},
+            Plasma: {name: 'Plasma', level: 0, modifier: 1.00},
+            Shielding: {name: 'Shielding', level: 0, modifier: 1.00},
+            Ion: {name: 'Ion', level: 0, modifier: 1.00},
+            Photon: {name: 'Photon', level: 0, modifier: 1.00},
+            Disruptor: {name: 'Disruptor', level: 0, modifier: 1.00},
+            CommandCenter: {name: 'Command Center', level: 0, modifier: 1.00},
+            TacticalCommander: {name: 'Tactical Commander', level: 0, modifier: 1.00}
         },
 
-    }
+    };
 
     $scope.defender = {
         id: 0,
-        level:0,
-        fleet:{},
+        level: 0,
+        fleet: {},
 
         tech: {
-            Armor: {name:'Armor', level:0, modifier: 1.00},
-            Laser: {name:'Laser', level:0, modifier: 1.00},
-            Missiles:{ name:'Missiles', level:0 , modifier: 1.00},
-            Plasma:{ name:'Plasma', level:0, modifier: 1.00},
-            Shielding:{ name:'Shielding', level:0, modifier: 1.00},
-            Ion:{ name:'Ion', level:0, modifier: 1.00},
-            Photon:{ name:'Photon', level:0, modifier: 1.00},
-            Disruptor:{ name:'Disruptor', level:0, modifier: 1.00},
-            CommandCenter:{ name:'Command Center', level:0, modifier: 1.00},
-            TacticalCommander:{ name:'Tactical Commander', level:0, modifier: 1.00}
+            Armor: {name: 'Armor', level: 0, modifier: 1.00},
+            Laser: {name: 'Laser', level: 0, modifier: 1.00},
+            Missiles: {name: 'Missiles', level: 0, modifier: 1.00},
+            Plasma: {name: 'Plasma', level: 0, modifier: 1.00},
+            Shielding: {name: 'Shielding', level: 0, modifier: 1.00},
+            Ion: {name: 'Ion', level: 0, modifier: 1.00},
+            Photon: {name: 'Photon', level: 0, modifier: 1.00},
+            Disruptor: {name: 'Disruptor', level: 0, modifier: 1.00},
+            CommandCenter: {name: 'Command Center', level: 0, modifier: 1.00},
+            TacticalCommander: {name: 'Tactical Commander', level: 0, modifier: 1.00}
         },
 
     }
 
+    $scope.results = {
+        remainingAtkFleet : {},
+        remainingDefFleet : {},
+        attackerXP : 0,
+        defenderXP: 0,
+        attackerLosses:0,
+        defenderLosses:0
+    };
 
     $scope.unitBaseValues = {
         fighter: {
             name: 'Fighter',
-            key:'fighter',
+            key: 'fighter',
             size: 5,
             x: 1,
             armor: 2,
@@ -308,93 +316,175 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
 
     $scope.defenseBaseValues = {
         barracks: {
-            size:0,
-            x:1,
-            power:4,
-            armor:4,
-            shield:0
+            size: 0,
+            x: 1,
+            power: 4,
+            armor: 4,
+            shield: 0
         },
-        laserTurret:{
-            size:0,
-            x:1,
-            power:8,
-            armor:8,
-            shield:0
+        laserTurret: {
+            size: 0,
+            x: 1,
+            power: 8,
+            armor: 8,
+            shield: 0
         },
-        missileTurret:{
-            size:0,
-            x:2,
-            power:16,
-            armor:16,
-            shield:0
+        missileTurret: {
+            size: 0,
+            x: 2,
+            power: 16,
+            armor: 16,
+            shield: 0
         },
-        plasmaTurret:{
-            size:0,
-            x:3,
-            power:24,
-            armor:24,
-            shield:0
+        plasmaTurret: {
+            size: 0,
+            x: 3,
+            power: 24,
+            armor: 24,
+            shield: 0
         },
-        ionTurret:{
-            size:0,
-            x:5,
-            power:32,
-            armor:32,
-            shield:2
+        ionTurret: {
+            size: 0,
+            x: 5,
+            power: 32,
+            armor: 32,
+            shield: 2
         },
-        photonTurret:{
-            size:0,
-            x:6,
-            power:64,
-            armor:64,
-            shield:6
+        photonTurret: {
+            size: 0,
+            x: 6,
+            power: 64,
+            armor: 64,
+            shield: 6
         },
-        disruptorTurret:{
-            size:0,
-            x:7,
-            power:256,
-            armor:256,
-            shield:8
+        disruptorTurret: {
+            size: 0,
+            x: 7,
+            power: 256,
+            armor: 256,
+            shield: 8
         },
-        deflectionShields:{
-            size:0,
-            x:5,
-            power:2,
-            armor:512,
-            shield:16
+        deflectionShields: {
+            size: 0,
+            x: 5,
+            power: 2,
+            armor: 512,
+            shield: 16
         },
-        planetaryShield:{
-            size:0,
-            x:5,
-            power:4,
-            armor:2048,
-            shield:20
+        planetaryShield: {
+            size: 0,
+            x: 5,
+            power: 4,
+            armor: 2048,
+            shield: 20
         },
-        planetaryRing:{
-            size:0,
-            x:6,
-            power:2048,
-            armor:1024,
-            shield:12
+        planetaryRing: {
+            size: 0,
+            x: 6,
+            power: 2048,
+            armor: 1024,
+            shield: 12
         }
     };
 
-    $scope.calcMultiplier = function(tech){
+    $scope.calcMultiplier = function (tech) {
         tech.modifier = 1 + (tech.level * .05);
         return tech.level * 5 + "%";
     };
 
-    $scope.getPowerArmorShield = function(unit){
 
+    $scope.calcDamagePerUnit = function (attackPwr, defShield, crossShields) {
+        var damageThroughShields = attackPwr * crossShields;
+        if (attackPwr > defShield) {
+            return attackPwr - defShield + damageThroughShields;
+        }
+        else {
+            return damageThroughShields
+        }
+    };
+
+    $scope.attackOneWay = function (side) {
+        var atkFleet;
+        var defFleet;
+        if (side == 'attacker') {
+            atkFleet = $scope.attacker.fleet;
+            defFleet = $scope.defender.fleet;
+        }
+        else if (side == 'defender') {
+            atkFleet = $scope.attacker.fleet;
+            defFleet = $scope.defender.fleet;
+        }
+        for (var atkUnit in atkFleet) {
+            var numAtkUnit = unit.quantity;
+            var crossShields;
+            if (atkUnit.tech == 'ion') {
+                crossShields = .5;
+            }
+            else {
+                crossShields = .01;
+            }
+            while (iterator > 0) {
+                var damageValue = 0;
+                for( var defUnit in defFleet ) {
+                    var numDefUnit = defUnit.quantity;
+                    if (isNaN(defUnit.shield)) {
+                        defUnit.shield = 0;
+                    }
+                    damageValue += calcDamagePerUnit(atkUnit.power, defUnit.shield, crossShields);
+                }
+                var q = 0;
+                for(var unit in defFleet){
+                    var numUnit = unit.quantity;
+                    if (isNaN(unit.shield)) {
+                        unit.shield = 0;
+                    }
+                    //var n = false;
+                    //if (shipNames[i] > 19) n = true;
+
+                    var totalDefArmor = numUnit * unit.armor;
+                    var damagePerUnit = calcDamagePerUnit(atkUnit.power, unit.shield, crossShields);
+                    var s = numAtkUnit * Math.pow(damagePerUnit,2) / damageValue;
+
+                    //if (j) s = e / h;
+
+//                    var u = s * k;
+                    var unitsRemaining = ( totalDefArmor - s ) / unit.armor;
+                    if (unitsRemaining < 0){
+                        unitsRemaining = 0;
+                    }
+                    if ( s > totalDefArmor ) {
+                        q += totalDefArmor / damagePerUnit;
+                    }
+                    else{
+                        q += s / damagePerUnit;
+                    }
+                    defFleet[unit] = unitsRemaining;
+
+                    // still confused on this part.I think its calculating the losses here.
+                    //if (isUnit) {
+                    //    var n = unit.size;
+                    //    m = roundUp(m - Math.ceil(p), findScale(i));
+                    //    if (m > 0) {
+                    //        m = Math.ceil(m);
+                    //        var t;
+                    //        if (side == "attack") {
+                    //            result[0] += m * n;
+                    //            t = parseInt($("attArm").value, 10)
+                    //        } else if (side == "defend") {
+                    //            result[1] += m * n;
+                    //            t = parseInt($("defArm").value, 10)
+                    //        }
+                    //        result[2] += Math.floor(m * n * (Math.floor(2 * t) / 100))
+                    //    }
+                    //}
+
+                }
+                numAtkUnit -= q
+            }
+        }
+        return c
     }
 }]);
-
-myApp.filter('modifier',function(){
-    return function(input){
-        var mod = input - 1.00
-        return mod + '%';
-    }
-})
 
 //
 //angular.module('2048', []).controller('gameController', function () {
