@@ -176,3 +176,8 @@
 label{
     padding-top:10px;
 }
+
+hr{
+    border-color: #2c3e50 !important;
+    border-style: outset !important;
+}

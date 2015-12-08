@@ -71,12 +71,13 @@ myApp.controller('finance', ['$scope', function ($scope) {
 myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
     //http://klingon.angeldsis.com/usyn/index/fetchtech?playerid=0932
     // returns {"data":{"armor":24,"laser":23,"missile":21,"plasma":15,"shield":14,"ion":13,"photon":8,"disruptor":3},"nick":"rabbit"}
-    $scope.getPlayerTech = function (playerID) {
+    $scope.getPlayerTech = function () {
         $http({
-            method: 'POST',
-            url: 'proxy.php',
-            data: {
-                address: 'http://klingon.angeldsis.com/usyn/index/fetchtech?playerid=932'
+            method: 'GET',
+            url: 'http://klingon.angeldsis.com/usyn/index/login_check',
+            headers:{
+                "Access-Control-Allow-Origin": 'http://klingon.angeldsis.com',
+                'Cookie': 'usyn=7hk433652j41l72q90pmjutak2'
             }
         }).then(function success(response) {
             console.log(response)
@@ -85,7 +86,6 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
             console.log('Error in getting response : ', response);
         })
     };
-
 
     $scope.attacker = {
         id: 0,
@@ -142,15 +142,16 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
     $scope.unitBaseValues = {
         fighter: {
             name: 'Fighter',
-            key: 'fighter',
+            tech: 'Laser',
             size: 5,
             x: 1,
             armor: 2,
             power: 2,
-            shield: 0
+            shield: 0,
         },
         bomber: {
             name: 'Bomber',
+            tech: 'Missiles',
             size: 10,
             x: 2,
             power: 4,
@@ -159,6 +160,7 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         },
         heavyBomber: {
             name: 'Heavy Bomber',
+            tech: 'Plasma',
             size: 30,
             x: 3,
             power: 10,
@@ -167,6 +169,7 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         },
         ionBomber: {
             name: 'Ion Bomber',
+            tech: 'Ion',
             size: 60,
             x: 5,
             power: 12,
@@ -175,6 +178,7 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         },
         corvette: {
             name: 'Corvette',
+            tech: 'Laser',
             size: 20,
             x: 1,
             power: 4,
@@ -183,6 +187,7 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         },
         recycler: {
             name: 'Recycler',
+            tech: 'Laser',
             size: 30,
             x: 1,
             power: 2,
@@ -191,24 +196,25 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         },
         destroyer: {
             name: 'Destroyer',
+            tech: 'Plasma',
             size: 40,
             x: 3,
             power: 8,
             armor: 8,
             shield: 0
-        }
-        ,
+        },
         frigate: {
             name: 'Frigate',
+            tech: 'Missiles',
             size: 80,
             x: 2,
             power: 12,
             armor: 12,
             shield: 0
-        }
-        ,
+        },
         ionFrigate: {
             name: 'Ion Frigate',
+            tech: 'Ion',
             size: 120,
             x: 5,
             power: 14,
@@ -217,6 +223,7 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         },
         scoutShip: {
             name: 'Scout Ship',
+            tech: 'Laser',
             size: 40,
             x: 1,
             power: 1,
@@ -226,6 +233,7 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         ,
         outpostShip: {
             name: 'Outpost Ship',
+            tech: 'Laser',
             size: 100,
             x: 1,
             power: 2,
@@ -235,6 +243,7 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         ,
         cruiser: {
             name: 'Cruiser',
+            tech: 'Plasma',
             size: 200,
             x: 3,
             power: 24,
@@ -244,24 +253,25 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         ,
         carrier: {
             name: 'Carrier',
+            tech: 'Missiles',
             size: 400,
             x: 2,
             power: 12,
             armor: 24,
             shield: 2
-        }
-        ,
+        },
         heavyCruiser: {
             name: 'Heavy Cruiser',
+            tech: 'Plasma',
             size: 500,
             x: 3,
             power: 48,
             armor: 48,
             shield: 4
-        }
-        ,
+        },
         battleship: {
             name: 'Battleship',
+            tech: 'Ion',
             size: 2000,
             x: 5,
             power: 168,
@@ -271,6 +281,7 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         ,
         fleetCarrier: {
             name: 'Fleet Carrier',
+            tech: 'Ion',
             size: 2500,
             x: 5,
             power: 64,
@@ -279,6 +290,7 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         },
         dreadnought: {
             name: 'Dreadnought',
+            tech: 'Photon',
             size: 10000,
             x: 6,
             power: 756,
@@ -288,6 +300,7 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         ,
         titan: {
             name: 'Titan',
+            tech: 'Disruptor',
             size: 50000,
             x: 7,
             power: 3402,
@@ -297,6 +310,7 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         ,
         leviathan: {
             name: 'Leviathan',
+            tech: 'Photon',
             size: 200000,
             x: 6,
             power: 10000,
@@ -306,6 +320,7 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
         ,
         deathStar: {
             name: 'Death Star',
+            tech: 'Disruptor',
             size: 500000,
             x: 7,
             power: 25500,
@@ -316,27 +331,35 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
 
     $scope.defenseBaseValues = {
         barracks: {
+            name:'Barracks',
             size: 0,
+            tech: 'Laser',
             x: 1,
             power: 4,
             armor: 4,
             shield: 0
         },
         laserTurret: {
+            name:'Laser Turret',
             size: 0,
+            tech: 'Laser',
             x: 1,
             power: 8,
             armor: 8,
             shield: 0
         },
         missileTurret: {
+            name:'Missile Turret',
             size: 0,
+            tech: 'Missiles',
             x: 2,
             power: 16,
             armor: 16,
             shield: 0
         },
         plasmaTurret: {
+            name:'Plasma Turret',
+            tech: 'Plasma',
             size: 0,
             x: 3,
             power: 24,
@@ -344,6 +367,8 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
             shield: 0
         },
         ionTurret: {
+            name:'Ion Turret',
+            tech: 'Ion',
             size: 0,
             x: 5,
             power: 32,
@@ -351,6 +376,8 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
             shield: 2
         },
         photonTurret: {
+            name:'Photon Turret',
+            tech: 'Photon',
             size: 0,
             x: 6,
             power: 64,
@@ -358,6 +385,8 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
             shield: 6
         },
         disruptorTurret: {
+            tech: 'Disruptor',
+            name:'Disruptor Turret',
             size: 0,
             x: 7,
             power: 256,
@@ -365,6 +394,8 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
             shield: 8
         },
         deflectionShields: {
+            name:'Deflection Shields',
+            tech: 'Ion',
             size: 0,
             x: 5,
             power: 2,
@@ -372,6 +403,8 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
             shield: 16
         },
         planetaryShield: {
+            name:'Planetary Shield',
+            tech: 'Ion',
             size: 0,
             x: 5,
             power: 4,
@@ -379,6 +412,8 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
             shield: 20
         },
         planetaryRing: {
+            name:'P-Ring',
+            tech: 'Photon',
             size: 0,
             x: 6,
             power: 2048,

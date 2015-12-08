@@ -1,19 +1,19 @@
 <div class="jumbotron calculator">
     <h1>Battle Calculator</h1>
-    <hr />
+    <hr/>
     <div class="row">
         <div class="col-sm-6">
             <div class="row">
                 <!--<div class="col-xs-3">-->
-                    <!--<label class="control-label">Attacker ID</label>-->
+                <!--<label class="control-label">Attacker ID</label>-->
 
                 <!--</div>-->
                 <!--<div class="col-xs-3">-->
-                    <!--<input-->
-                            <!--type="text"-->
-                            <!--class="form-control"-->
-                            <!--ng-model="attacker.id"-->
-                    <!--/>-->
+                <!--<input-->
+                <!--type="text"-->
+                <!--class="form-control"-->
+                <!--ng-model="attacker.id"-->
+                <!--/>-->
                 <!--</div>-->
                 <div class="col-xs-3">
                     <label class="control-label">Attacker Level</label>
@@ -31,38 +31,39 @@
         </div>
         <div class="col-sm-6">
             <!--<div class="row">-->
-                <!--<div class="col-xs-3">-->
-                    <!--<label>Defender ID</label>-->
-                <!--</div>-->
-                <!--<div class="col-xs-3">-->
-                    <!--<input-->
-                            <!--type="text"-->
-                            <!--class="form-control"-->
-                            <!--ng-model="defender.id"-->
-                    <!--/>-->
+            <!--<div class="col-xs-3">-->
+            <!--<label>Defender ID</label>-->
             <!--</div>-->
-                <!--</div>-->
-                <div class="col-xs-3">
-                    <label>Defender Level</label>
-                </div>
-                <div class="col-xs-3">
-                    <input
-                            type="text"
-                            class="form-control"
-                            ng-model="defender.level"
-                    />
-                </div>
+            <!--<div class="col-xs-3">-->
+            <!--<input-->
+            <!--type="text"-->
+            <!--class="form-control"-->
+            <!--ng-model="defender.id"-->
+            <!--/>-->
+            <!--</div>-->
+            <!--</div>-->
+            <div class="col-xs-3">
+                <label>Defender Level</label>
             </div>
+            <div class="col-xs-3">
+                <input
+                        type="text"
+                        class="form-control"
+                        ng-model="defender.level"
+                />
+            </div>
+        </div>
 
 
     </div>
-
+    <button ng-click="getPlayerTech()">click</button>
 
     <form class="form-inline">
         <div class="row">
             <div class="col-xs-12 col-md-6">
 
                 <h3 style="margin-bottom:25px;">Attacker's Technology</h3>
+
                 <div class="row ">
                     <div class="col-sm-4">
                         <h5>Tech</h5>
@@ -81,17 +82,17 @@
                         <label for="attacker_{{x}}" class="control-label">{{x.name}}</label>
                     </div>
                     <div class="col-sm-5">
-                        <input type="text" id="attacker_{{x}}" class="form-control tech-input" ng-model="attacker.tech[y].level" />
+                        <input type="text" id="attacker_{{x}}" class="form-control tech-input"
+                               ng-model="attacker.tech[y].level"/>
                     </div>
                     <div class="col-sm-3">
                         <h6 class="align-right" ng-bind="calcMultiplier(attacker.tech[y])"></h6>
                     </div>
                 </div> <!-- end attacker tech -->
-
-                <hr />
             </div>
             <div class="col-xs-12 col-md-6">
                 <h3 style="margin-bottom:25px;">Defender's Technology</h3>
+
                 <div class="row">
                     <div class="col-sm-4">
                         <h5>Tech</h5>
@@ -103,23 +104,25 @@
                         <h5>Modifier</h5>
                     </div>
                 </div>
-                <div ng-repeat="y in defender.tech" class="row">
+                <div ng-repeat="(y,x) in defender.tech" class="row">
                     <div class="col-sm-4">
-                        <label for="defender_{{y}}" class="control-label">{{y.name}}</label>
+                        <label for="defender_{{y}}" class="control-label">{{x.name}}</label>
                     </div>
                     <div class="col-sm-5">
-                        <input type="text" id="defender_{{y}}" class="form-control tech-input" ng-model="defender.tech[y.name].level" />
+                        <input type="text" id="defender_{{y}}" class="form-control tech-input"
+                               ng-model="defender.tech[y].level"/>
                     </div>
                     <div class="col-sm-3">
-                        <h6 class="align-right" ng-bind="calcMultiplier(defender.tech[y.name])"></h6>
+                        <h6 class="align-right" ng-bind="calcMultiplier(defender.tech[y])"></h6>
                     </div>
                 </div>
-                <hr />
             </div>
         </div>
+        <hr />
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <h3 style="margin-bottom:25px;">Attacker's Fleet</h3>
+
                 <div class="row">
                     <div class="col-sm-3">
                         <h5>Unit</h5>
@@ -142,14 +145,15 @@
                         <label for="attacker_quantityOf_{{unit.name}}" class="control-label">{{unit.name}}</label>
                     </div>
                     <div class="col-sm-2" style="padding:0;">
-                        <input type="text" id="attacker_quantityOf_{{unit.name}}" class="form-control tech-input" ng-model="attacker.fleet[unitKey]" />
+                        <input type="text" id="attacker_quantityOf_{{unit.name}}" class="form-control tech-input"
+                               ng-model="attacker.fleet[unitKey]"/>
                     </div>
 
                     <div class="col-sm-4">
                         <div class="col-xs-4">
-                             <h6>
-                                 {{unit.power}}
-                             </h6>
+                            <h6>
+                                {{(unit.power * attacker.tech[unit.tech].modifier)}}
+                            </h6>
                         </div>
 
 
@@ -179,6 +183,7 @@
 
             <div class="col-xs-12 col-md-6">
                 <h3 style="margin-bottom:25px;">Defender's Fleet</h3>
+
                 <div class="row">
                     <div class="col-sm-3">
                         <h5>Unit</h5>
@@ -201,7 +206,8 @@
                         <label for="defender_quantityOf_{{unit.name}}" class="control-label">{{unit.name}}</label>
                     </div>
                     <div class="col-sm-2" style="padding:0;">
-                        <input type="text" id="defender_quantityOf_{{unit.name}}" class="form-control tech-input" ng-model="defender.fleet[unitKey]" />
+                        <input type="text" id="defender_quantityOf_{{unit.name}}" class="form-control tech-input"
+                               ng-model="defender.fleet[unitKey]"/>
                     </div>
 
                     <div class="col-sm-4">
@@ -234,6 +240,87 @@
             </div>
         </div>
         <hr />
+        <div class="row">
+            <div class="col-xs-12 col-md-6"><!-- START ATTACKERS DEFENSE BECAUSE THAT MAKES SENSE -->
+
+                <div ng-repeat="(unitKey, unit) in defenseBaseValues" class="row">
+                    <div class="col-sm-3">
+                        <label for="attacker_quantityOf_{{unit.name}}" class="control-label">{{unit.name}}</label>
+                    </div>
+                    <div class="col-sm-2" style="padding:0;">
+                        <input type="text" id="attacker_quantityOf_{{unit.name}}" class="form-control tech-input"
+                               ng-model="attacker.fleet[unitKey]"/>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="col-xs-4">
+                            <h6>
+                                {{(unit.power * attacker.tech[unit.tech].modifier)}}
+                            </h6>
+                        </div>
+
+
+                        <div class="col-xs-4">
+                            <h6>
+                                {{unit.armor * attacker.tech.Armor.modifier}}
+                            </h6>
+                        </div>
+
+                        <div class="col-xs-4">
+                            <h6>
+                                ( {{unit.shield * attacker.tech.Shielding.modifier}} )
+
+                            </h6>
+                        </div>
+
+
+                    </div>
+                    <div class="col-xs-2">
+
+                    </div>
+
+
+                </div>
+            </div><!-- end Attacker's base defense. idk why -->
+
+            <div class="col-xs-12 col-md-6"><!-- START DEFENDERS BASE DEFENSE -->
+                <div ng-repeat="(unitKey, unit) in defenseBaseValues" class="row">
+                    <div class="col-sm-3">
+                        <label for="attacker_quantityOf_{{unit.name}}" class="control-label">{{unit.name}}</label>
+                    </div>
+                    <div class="col-sm-2" style="padding:0;">
+                        <input type="text" id="attacker_quantityOf_{{unit.name}}" class="form-control tech-input"
+                               ng-model="attacker.fleet[unitKey]"/>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="col-xs-4">
+                            <h6>
+                                {{(unit.power * attacker.tech[unit.tech].modifier)}}
+                            </h6>
+                        </div>
+                        <div class="col-xs-4">
+                            <h6>
+                                {{unit.armor * attacker.tech.Armor.modifier}}
+                            </h6>
+                        </div>
+                        <div class="col-xs-4">
+                            <h6>
+                                ( {{unit.shield * attacker.tech.Shielding.modifier}} )
+
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+
+                    </div>
+                </div>
+            </div><!-- end Defenders base defense -->
+        </div>
+
+        <hr />
+
+
+
         <div class="panel panel-primary" style="text-align: center; background-color: inherit">
             <div class="panel-heading">
                 <h2>Battle Report</h2>
