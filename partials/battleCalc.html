@@ -3,14 +3,58 @@
     <hr />
     <div class="row">
         <div class="col-sm-6">
-            <label>Attacker ID</label>
-            <input
-                    type="text"
-                    ng-model="attacker.id"
-                    ng-click="getPlayerTech(attacker.id)"
+            <div class="row">
+                <!--<div class="col-xs-3">-->
+                    <!--<label class="control-label">Attacker ID</label>-->
+
+                <!--</div>-->
+                <!--<div class="col-xs-3">-->
+                    <!--<input-->
+                            <!--type="text"-->
+                            <!--class="form-control"-->
+                            <!--ng-model="attacker.id"-->
+                    <!--/>-->
+                <!--</div>-->
+                <div class="col-xs-3">
+                    <label class="control-label">Attacker Level</label>
+
+                </div>
+                <div class="col-xs-3">
+                    <input
+                            type="text"
+                            class="form-control"
+                            ng-model="attacker.level"
                     />
+                </div>
+            </div>
+
         </div>
-        <div class="col-sm-6"></div>
+        <div class="col-sm-6">
+            <!--<div class="row">-->
+                <!--<div class="col-xs-3">-->
+                    <!--<label>Defender ID</label>-->
+                <!--</div>-->
+                <!--<div class="col-xs-3">-->
+                    <!--<input-->
+                            <!--type="text"-->
+                            <!--class="form-control"-->
+                            <!--ng-model="defender.id"-->
+                    <!--/>-->
+            <!--</div>-->
+                <!--</div>-->
+                <div class="col-xs-3">
+                    <label>Defender Level</label>
+                </div>
+                <div class="col-xs-3">
+                    <input
+                            type="text"
+                            class="form-control"
+                            ng-model="defender.level"
+                    />
+                </div>
+            </div>
+
+
     </div>
 
 
@@ -59,15 +103,15 @@
                         <h5>Modifier</h5>
                     </div>
                 </div>
-                <div ng-repeat="(y,x) in defender.tech" class="row">
+                <div ng-repeat="y in defender.tech" class="row">
                     <div class="col-sm-4">
-                        <label for="defender_{{y}}" class="control-label">{{y}}</label>
+                        <label for="defender_{{y}}" class="control-label">{{y.name}}</label>
                     </div>
                     <div class="col-sm-5">
-                        <input type="text" id="defender_{{y}}" class="form-control tech-input" ng-model="defender.tech[y].level" />
+                        <input type="text" id="defender_{{y}}" class="form-control tech-input" ng-model="defender.tech[y.name].level" />
                     </div>
                     <div class="col-sm-3">
-                        <h6 class="align-right" ng-bind="calcMultiplier(defender.tech[y])"></h6>
+                        <h6 class="align-right" ng-bind="calcMultiplier(defender.tech[y.name])"></h6>
                     </div>
                 </div>
                 <hr />
@@ -111,13 +155,14 @@
 
                         <div class="col-xs-4">
                             <h6>
-                                {{unit.armor}}
+                                {{unit.armor * attacker.tech.Armor.modifier}}
                             </h6>
                         </div>
 
                         <div class="col-xs-4">
                             <h6>
-                                {{unit.shield}}
+                                ( {{unit.shield * attacker.tech.Shielding.modifier}} )
+
                             </h6>
                         </div>
 
@@ -169,13 +214,14 @@
 
                         <div class="col-xs-4">
                             <h6>
-                                {{unit.armor}}
+                                {{unit.armor * defender.tech.Armor.modifier}}
+
                             </h6>
                         </div>
 
                         <div class="col-xs-4">
                             <h6>
-                                {{unit.shield}}
+                                ( {{unit.shield * defender.tech.Shielding.modifier}} )
                             </h6>
                         </div>
 

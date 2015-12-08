@@ -8,6 +8,8 @@ var myApp = angular.module('myApp', ['ngRoute']);
 myApp.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
         when('/', {templateUrl: 'partials/websiteList.html', controller: 'viewCtrl'}).
+            //when('/blog', {templateUrl: 'partials/blog.html'} controller)
+        when('/battleCalc', {templateUrl: 'partials/battleCalc.html', controller: 'battleCalc'}).
         when('/angular-js', {templateUrl: "partials/angular-js.html", controller: 'todoCtrl'}).
         when('/aboutme', {templateUrl: "partials/aboutme.html", controller: 'viewCtrl'}).
         when('/python', {templateUrl: "partials/python.html", controller: 'viewCtrl'}).
@@ -86,44 +88,48 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
 
 
     $scope.attacker = {
-        id: 932,
-
+        id: 0,
+        level:0,
         fleet:{
             fighter: 1000,
             frigate: 250
         },
 
         tech: {
-            Armor: {name:'Armor', level:0},
-            Laser: {name:'Laser', level:0},
-            Missiles:{ name:'Missiles', level:0},
-            Plasma:{ name:'Plasma', level:0},
-            Shielding:{ name:'Shielding', level:0},
-            Ion:{ name:'Ion', level:0},
-            Photon:{ name:'Photon', level:0},
-            Disruptor:{ name:'Disruptor', level:0},
-            CommandCenter:{ name:'Command Center', level:0},
-            TacticalCommander:{ name:'Tactical Commander', level:0}
+            Armor: {name:'Armor', level:0, modifier: 1.00},
+            Laser: {name:'Laser', level:0, modifier: 1.00},
+            Missiles:{ name:'Missiles', level:0 , modifier: 1.00},
+            Plasma:{ name:'Plasma', level:0, modifier: 1.00},
+            Shielding:{ name:'Shielding', level:0, modifier: 1.00},
+            Ion:{ name:'Ion', level:0, modifier: 1.00},
+            Photon:{ name:'Photon', level:0, modifier: 1.00},
+            Disruptor:{ name:'Disruptor', level:0, modifier: 1.00},
+            CommandCenter:{ name:'Command Center', level:0, modifier: 1.00},
+            TacticalCommander:{ name:'Tactical Commander', level:0, modifier: 1.00}
         },
 
     }
 
     $scope.defender = {
+        id: 0,
+        level:0,
+        fleet:{},
 
         tech: {
-            Armor: {name:'Armor', level:0},
-            Laser: {name:'Laser', level:0},
-            Missiles:{ name:'Missiles', level:0},
-            Plasma:{ name:'Plasma', level:0},
-            Shielding:{ name:'Shielding', level:0},
-            Ion:{ name:'Ion', level:0},
-            Photon:{ name:'Photon', level:0},
-            Disruptor:{ name:'Disruptor', level:0},
-            CommandCenter:{ name:'Command Center', level:0},
-            TacticalCommander:{ name:'Tactical Commander', level:0}
+            Armor: {name:'Armor', level:0, modifier: 1.00},
+            Laser: {name:'Laser', level:0, modifier: 1.00},
+            Missiles:{ name:'Missiles', level:0 , modifier: 1.00},
+            Plasma:{ name:'Plasma', level:0, modifier: 1.00},
+            Shielding:{ name:'Shielding', level:0, modifier: 1.00},
+            Ion:{ name:'Ion', level:0, modifier: 1.00},
+            Photon:{ name:'Photon', level:0, modifier: 1.00},
+            Disruptor:{ name:'Disruptor', level:0, modifier: 1.00},
+            CommandCenter:{ name:'Command Center', level:0, modifier: 1.00},
+            TacticalCommander:{ name:'Tactical Commander', level:0, modifier: 1.00}
         },
 
     }
+
 
     $scope.unitBaseValues = {
         fighter: {
@@ -374,13 +380,21 @@ myApp.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {
     };
 
     $scope.calcMultiplier = function(tech){
+        tech.modifier = 1 + (tech.level * .05);
         return tech.level * 5 + "%";
-    }
+    };
 
     $scope.getPowerArmorShield = function(unit){
 
     }
 }]);
+
+myApp.filter('modifier',function(){
+    return function(input){
+        var mod = input - 1.00
+        return mod + '%';
+    }
+})
 
 //
 //angular.module('2048', []).controller('gameController', function () {
