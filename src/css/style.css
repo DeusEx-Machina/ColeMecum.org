@@ -224,11 +224,9 @@ label{
     overflow: hidden;
     background: #4B4848;
     background-size: cover;
-    background-image: url(../img/grand_teton_national_park_photo_us.png);
-    background-position: center 16%;
+    background-image: url(../img/yosemite.jpg);
     height: 580px;
     position: relative;
-    top: -70px;
     padding-top: 150px;
 }
 
@@ -264,7 +262,7 @@ label{
 .stripe h2:after, .stripe h2:before{
     content: "";
     position: absolute;
-    height: 25%;
+    height: 15%;
     width: 40%;
     border-bottom: 1px solid #404040;
 }
