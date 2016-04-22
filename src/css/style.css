@@ -53,15 +53,10 @@
 
     -webkit-backface-visibility: hidden;
 }
-.ch-info h3 {
-    color: #fff;
-    text-align:center;
-    letter-spacing: 1px;
-    font-size: 15px;
-    margin: 0 0;
-    padding: 55px 0 0 0;
-    height: 105px;
-    font-family: 'Open Sans', Arial, sans-serif;
+.ch-info a {
+    position:relative;
+    top: 40%;
+    left:18.5%;
     text-shadow:
             0 0 1px #fff,
             0 1px 2px rgba(0,0,0,0.3);
@@ -102,7 +97,11 @@
     box-shadow:
             inset 0 0 0 1px rgba(255,255,255,0.1),
             0 1px 2px rgba(0,0,0,0.1);
+    transform:scale(.95);
+    transition: all 0.3s ease-in-out;
+    cursor:pointer;
 }
+
 .ch-item:hover .ch-info {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -125,6 +124,9 @@
     background-size: 240px auto;
     background-repeat: no-repeat;
     background-position:center;
+}
+
+.uc-icon:hover{
 }
 
 .cs-icon{
