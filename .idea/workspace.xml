@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3613e6f-9bc5-4c13-9e64-1b313ac8b163" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/yosemite.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/style.css" afterPath="$PROJECT_DIR$/src/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/app.js" afterPath="$PROJECT_DIR$/src/js/app.js" />
     </list>
     <ignored path="PersonalWebsite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -370,7 +368,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1437494257057</updated>
-      <workItem from="1461281007742" duration="3698000" />
+      <workItem from="1461281007742" duration="3806000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Error">
       <created>1446572264183</created>
@@ -505,11 +503,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461337949114</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Small tweaks that make a big difference. Improved parallax scrolling. fixed wierd div offset. Changed background image to yosemite.">
+      <created>1461338686130</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1461338686130</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3698000" />
+    <option name="totallyTimeSpent" value="3806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="5" y="23" width="1680" height="1023" extended-state="6" />
@@ -579,7 +584,8 @@
     <MESSAGE value="Major overhaul. More to come" />
     <MESSAGE value="removed php file" />
     <MESSAGE value="forgot how to use git after all the svn stuff." />
-    <option name="LAST_COMMIT_MESSAGE" value="forgot how to use git after all the svn stuff." />
+    <MESSAGE value="Small tweaks that make a big difference. Improved parallax scrolling. fixed wierd div offset. Changed background image to yosemite." />
+    <option name="LAST_COMMIT_MESSAGE" value="Small tweaks that make a big difference. Improved parallax scrolling. fixed wierd div offset. Changed background image to yosemite." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
