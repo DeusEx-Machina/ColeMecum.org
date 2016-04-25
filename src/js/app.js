@@ -523,10 +523,7 @@
 $(window).scroll(function () {
     //current scrolling position
     var wScroll = $(this).scrollTop();
-    console.log(wScroll);
-
-
-    if (wScroll <  $('#section2').offset().top ) {
+    if (wScroll >  $('#section2').offset().top - $(window).height()) {
         $('#section1').css({'top': wScroll});
         $('#section2, #section3, #section4, #section5').css({'top': -wScroll/2});
 
@@ -539,3 +536,8 @@ $(window).scroll(function () {
         $('#header').removeClass('navbar-inverse');
     }
 });
+
+
+var Euler = {
+    
+};

@@ -214,6 +214,139 @@
             <p>Here is an example of some simple Components I have created using React! Looking forward to doing a lot more with this library in the future.</p>
         </div>
 
+        <div id="container">
+
+            <p>
+                If you can see this, React is <strong>not</strong> working right.
+                If you checked out the source from GitHub make sure to run <code>grunt</code>.
+            </p>
+        </div>
+        <div>
+            <h4>React Hello World</h4>
+            <p>Dispalys the classic hello world and also the number of seconds the page has been open... just for fun.</p>
+
+            <script type="text/babel">
+                var ExampleApplication = React.createClass({
+                    render: function () {
+                        var elapsed = Math.round(this.props.elapsed / 100);
+                        var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );
+                        var message =
+                                'Hello World! This app has been successfully running for ' + seconds + ' seconds.';
+
+                        return <p>{message}</p>;
+                    }
+                });
+                var start = new Date().getTime();
+                setInterval(function () {
+                    ReactDOM.render(
+                            <ExampleApplication elapsed={new Date().getTime() - start}/>,
+                            document.getElementById('container')
+                    );
+                }, 50);
+            </script>
+        </div>
+        <hr/>
+
+        <div id="container1">
+            <script async src="dist/react.js"></script>
+            <script async src="dist/react-dom.js"></script>
+            <script async src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+            <script type="text/babel">
+
+                var Day = React.createClass({
+                    getInitialState: function(){
+                        return {active : false};
+                    },
+                    onClick: function(){
+                        this.setState({ active:true });
+                    },
+                    render: function () {
+                        return <td className={this.state.active ? 'active': ''} onClick={this.onClick}>{this.props.date}</td>
+                    }
+                });
+                var Week = React.createClass({
+                    renderDays: function () {
+                        var days = [];
+                        for (var i = 0; i < 7; i++) {
+
+                            if(i < this.props.offset){
+                                days.push(<Day date={''} key={i} />);
+                            }
+                            else{
+                                var date = this.props.start + i - this.props.offset;
+                                if(date > 31){break;}
+                                days.push(<Day date={date} key={i}/>)
+                            }
+                        }
+                        return days
+                    },
+                    render: function () {
+                        return <tr class="week">{this.renderDays()}</tr>
+                    }
+                });
+
+
+
+
+                var Month = React.createClass({
+                    renderWeeks: function () {
+                        var weeks = [];
+                        for (var i = 1; i < 31; i += 7) {
+
+
+                            if(i === 1){
+                                weeks.push(<Week offset={2}  start={1} key={0}/>);
+                                continue;
+                            }
+                            else{
+                                weeks.push(<Week offset={0} start={i}  key={i}/>)
+                            }
+                        }
+                        return weeks
+                    },
+                    render: function () {
+                        return <tbody class="month">{this.renderWeeks()}</tbody>
+                    }
+                });
+
+                var Header = React.createClass({
+                    render: function () {
+                        return <thead>
+                            <tr>
+                                <th>M</th>
+                                <th>Tu</th>
+                                <th>W</th>
+                                <th>Th</th>
+                                <th>F</th>
+                                <th>Sa</th>
+                                <th>Su</th>
+                            </tr>
+                        </thead>;
+                    }
+                });
+
+
+
+
+                var Datepicker = React.createClass({
+                    render: function () {
+                        return <div>
+                            <h4>React Datepicker</h4>
+                            <p>A simple datepicker component built using react.js</p>
+                            <table className="table table-striped table-hover">
+                                <Header/>
+                                <Month/>
+                            </table>
+                        </div>
+                    }
+                });
+                ReactDOM.render(
+                        <Datepicker/>,
+                        document.getElementById("container1")
+                )
+            </script>
+        </div>
+
     </div>
 
 </div>
