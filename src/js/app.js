@@ -528,7 +528,7 @@ $(window).scroll(function () {
 
     if (wScroll <  $('#section2').offset().top ) {
         $('#section1').css({'top': wScroll});
-        $('#section2, #section3').css({'top': -wScroll/2});
+        $('#section2, #section3, #section4, #section5').css({'top': -wScroll/2});
 
         if( !$('header').get(0).classList.contains('navbar-inverse') ){
             $('#header').addClass('navbar-inverse');
