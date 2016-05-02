@@ -38,23 +38,18 @@ gulp.task('image', function(){
         .pipe( plumber() )
         .pipe( imagemin )
         .pipe( gulp.dest('img/'))
-        .pipe( livereload() );
 });
 
 //everything scss related goes here
 gulp.task('styles', function(){
     return gulp.src( SCSS )
+        .pipe( plumber() )
+
         .pipe( sass( {
             style: 'compressed'}
         ))
         .pipe( gulp.dest( DEST ))
         .pipe( browserSync.reload({stream:true}));
-});
-
-gulp.task('browser-sync', function(){
-    browserSync.init(null, {
-        baseDir:'./'
-    })
 });
 
 // Static Server + watching scss/html files
@@ -65,6 +60,7 @@ gulp.task('serve', ['styles'], function() {
     });
 
     gulp.watch( SCSS, ['styles']);
+    gulp.watch( JS, ['scripts']);
     gulp.watch("*.html").on('change', browserSync.reload);
 });
 
