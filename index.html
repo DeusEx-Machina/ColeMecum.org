@@ -197,175 +197,193 @@
         <div class="row header">
             <div class="col-md-12 stripe">
                 <h2 class="modal-title">About Me</h2>
-                <p class="text-center"><i>"I am only an average man, but by George, I work harder at it than the average man"</i> -Theodore Roosevelt</p>
+                <p class="text-center"><i>"I am only an average man, but by George, I work harder at it than the average
+                    man"</i> -Theodore Roosevelt</p>
             </div>
             <div class="row">
                 <img src="" alt="Picture of myself and my baby niece Etta Berquist">
 
-        </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div id="section5">
+
+<!--<script async src="node_modules/react/dist/react.min.js"></script>-->
+<!--<script async src="node_modules/react-dom/dist/react-dom.min.js"></script>-->
+<!--<script async src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>-->
+<!--<div id="section5">-->
+    <!--<div class="container">-->
+        <!--<div class="col-md-12 stripe">-->
+            <!--<h2 class="web-title">React.js</h2>-->
+            <!--<p>Here is an example of some simple Components I have created using React! Looking forward to doing a lot-->
+                <!--more with this library in the future.</p>-->
+        <!--</div>-->
+
+        <!--<div id="container">-->
+
+            <!--<p>-->
+                <!--If you can see this, React is <strong>not</strong> working right.-->
+                <!--If you checked out the source from GitHub make sure to run <code>grunt</code>.-->
+            <!--</p>-->
+        <!--</div>-->
+        <!--<div>-->
+            <!--<h4>React Hello World</h4>-->
+            <!--<p>Dispalys the classic hello world and also the number of seconds the page has been open... just for-->
+                <!--fun.</p>-->
+
+            <!--<script type="text/jsx">-->
+                <!--var ExampleApplication = React.createClass({-->
+                    <!--render: function () {-->
+                        <!--var elapsed = Math.round(this.props.elapsed / 100);-->
+                        <!--var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );-->
+                        <!--var message =-->
+                                <!--'Hello World! This app has been successfully running for ' + seconds + ' seconds.';-->
+
+                        <!--return <p>{message}</p>;-->
+                    <!--}-->
+                <!--});-->
+                <!--var start = new Date().getTime();-->
+                <!--setInterval(function () {-->
+                    <!--ReactDOM.render(-->
+                            <!--<ExampleApplication elapsed={new Date().getTime() - start}/>,-->
+                            <!--document.getElementById('container')-->
+                    <!--);-->
+                <!--}, 50);-->
+            <!--</script>-->
+        <!--</div>-->
+        <!--<hr/>-->
+
+        <!--<div id="container1">-->
+
+            <!--<script type="text/jsx">-->
+
+                <!--var Day = React.createClass({-->
+                    <!--getInitialState: function () {-->
+                        <!--return {active: false};-->
+                    <!--},-->
+                    <!--onClick: function () {-->
+                        <!--this.setState({active: true});-->
+                    <!--},-->
+                    <!--render: function () {-->
+                        <!--return <td className={this.state.active ? 'active': ''}-->
+                                   <!--onClick={this.onClick}>{this.props.date}</td>-->
+                    <!--}-->
+                <!--});-->
+                <!--var Week = React.createClass({-->
+                    <!--renderDays: function () {-->
+                        <!--var days = [];-->
+                        <!--for (var i = 0; i < 7; i++) {-->
+
+                            <!--if (i < this.props.offset) {-->
+                                <!--days.push(<Day date={''} key={i}/>);-->
+                            <!--}-->
+                            <!--else {-->
+                                <!--var date = this.props.start + i - this.props.offset;-->
+                                <!--if (date > 31) {-->
+                                    <!--break;-->
+                                <!--}-->
+                                <!--days.push(<Day date={date} key={i}/>)-->
+                            <!--}-->
+                        <!--}-->
+                        <!--return days-->
+                    <!--},-->
+                    <!--render: function () {-->
+                        <!--return <tr class="week">{this.renderDays()}</tr>-->
+                    <!--}-->
+                <!--});-->
+
+
+
+
+                <!--var Month = React.createClass({-->
+
+                    <!--/**-->
+                     <!--* @param {int} The month number, 0 based-->
+                     <!--* @param {int} The year, not zero based, required to account for leap years-->
+                     <!--* @return {Date[]} List with date objects for each day of the month-->
+                     <!--*/-->
+                    <!--getDaysInMonth: function ( date  ) {-->
+
+                        <!--var weeks = [];-->
+                        <!--var days = [];-->
+                        <!--while (date.getMonth() !== date.getMonth() + 1) {-->
+
+                            <!--if( date.getDay() == 1){-->
+                                <!--//start a new week on monday-->
+                                <!--weeks.push(<Week days={ days } />);-->
+                            <!--}-->
+                            <!--days.push(date);-->
+                            <!--date.setDate(date.getDate() + 1);-->
+                        <!--}-->
+                        <!--console.log(weeks);-->
+                        <!--return weeks;-->
+                    <!--},-->
+
+
+                    <!--render: function () {-->
+                        <!--var weeks = this.getDaysInMonth( new Day());-->
+                        <!--return <tbody class="month">{weeks}</tbody>-->
+                    <!--}-->
+                <!--});-->
+
+                <!--var Header = React.createClass({-->
+                    <!--render: function () {-->
+                        <!--return <thead>-->
+                            <!--<tr>-->
+                                <!--<th>M</th>-->
+                                <!--<th>Tu</th>-->
+                                <!--<th>W</th>-->
+                                <!--<th>Th</th>-->
+                                <!--<th>F</th>-->
+                                <!--<th>Sa</th>-->
+                                <!--<th>Su</th>-->
+                            <!--</tr>-->
+                        <!--</thead>;-->
+                    <!--}-->
+                <!--});-->
+
+
+
+
+                <!--var Datepicker = React.createClass({-->
+                    <!--render: function () {-->
+                        <!--return <div>-->
+                            <!--<h4>React Datepicker</h4>-->
+                            <!--<p>A simple datepicker component built using react.js</p>-->
+                            <!--<table className="table table-striped table-hover">-->
+                                <!--<Header/>-->
+                                <!--<Month/>-->
+                            <!--</table>-->
+                        <!--</div>-->
+                    <!--}-->
+                <!--});-->
+                <!--ReactDOM.render(-->
+                        <!--<Month/>,-->
+                        <!--document.getElementById("container1")-->
+                <!--)-->
+            <!--</script>-->
+        <!--</div>-->
+
+    <!--</div>-->
+
+<!--</div>-->
+<footer>
     <div class="container">
-        <div class="col-md-12 stripe">
-            <h2 class="web-title">React.js</h2>
-            <p>Here is an example of some simple Components I have created using React! Looking forward to doing a lot more with this library in the future.</p>
-        </div>
 
-        <div id="container">
-
-            <p>
-                If you can see this, React is <strong>not</strong> working right.
-                If you checked out the source from GitHub make sure to run <code>grunt</code>.
-            </p>
-        </div>
-        <div>
-            <h4>React Hello World</h4>
-            <p>Dispalys the classic hello world and also the number of seconds the page has been open... just for fun.</p>
-
-            <script type="text/babel">
-                var ExampleApplication = React.createClass({
-                    render: function () {
-                        var elapsed = Math.round(this.props.elapsed / 100);
-                        var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );
-                        var message =
-                                'Hello World! This app has been successfully running for ' + seconds + ' seconds.';
-
-                        return <p>{message}</p>;
-                    }
-                });
-                var start = new Date().getTime();
-                setInterval(function () {
-                    ReactDOM.render(
-                            <ExampleApplication elapsed={new Date().getTime() - start}/>,
-                            document.getElementById('container')
-                    );
-                }, 50);
-            </script>
-        </div>
-        <hr/>
-
-        <div id="container1">
-            <script async src="dist/react.js"></script>
-            <script async src="dist/react-dom.js"></script>
-            <script async src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
-            <script type="text/babel">
-
-                var Day = React.createClass({
-                    getInitialState: function(){
-                        return {active : false};
-                    },
-                    onClick: function(){
-                        this.setState({ active:true });
-                    },
-                    render: function () {
-                        return <td className={this.state.active ? 'active': ''} onClick={this.onClick}>{this.props.date}</td>
-                    }
-                });
-                var Week = React.createClass({
-                    renderDays: function () {
-                        var days = [];
-                        for (var i = 0; i < 7; i++) {
-
-                            if(i < this.props.offset){
-                                days.push(<Day date={''} key={i} />);
-                            }
-                            else{
-                                var date = this.props.start + i - this.props.offset;
-                                if(date > 31){break;}
-                                days.push(<Day date={date} key={i}/>)
-                            }
-                        }
-                        return days
-                    },
-                    render: function () {
-                        return <tr class="week">{this.renderDays()}</tr>
-                    }
-                });
-
-
-
-
-                var Month = React.createClass({
-                    renderWeeks: function () {
-                        var weeks = [];
-                        for (var i = 1; i < 31; i += 7) {
-
-
-                            if(i === 1){
-                                weeks.push(<Week offset={2}  start={1} key={0}/>);
-                                continue;
-                            }
-                            else{
-                                weeks.push(<Week offset={0} start={i}  key={i}/>)
-                            }
-                        }
-                        return weeks
-                    },
-                    render: function () {
-                        return <tbody class="month">{this.renderWeeks()}</tbody>
-                    }
-                });
-
-                var Header = React.createClass({
-                    render: function () {
-                        return <thead>
-                            <tr>
-                                <th>M</th>
-                                <th>Tu</th>
-                                <th>W</th>
-                                <th>Th</th>
-                                <th>F</th>
-                                <th>Sa</th>
-                                <th>Su</th>
-                            </tr>
-                        </thead>;
-                    }
-                });
-
-
-
-
-                var Datepicker = React.createClass({
-                    render: function () {
-                        return <div>
-                            <h4>React Datepicker</h4>
-                            <p>A simple datepicker component built using react.js</p>
-                            <table className="table table-striped table-hover">
-                                <Header/>
-                                <Month/>
-                            </table>
-                        </div>
-                    }
-                });
-                ReactDOM.render(
-                        <Datepicker/>,
-                        document.getElementById("container1")
-                )
-            </script>
-        </div>
-
+        <ul class="list-inline">
+            <li><a href="https://www.linkedin.com/in/cdmecum">LinkedIn</a></li>
+            <li><a href="https://github.com/DeusEx-Machina/PersonalWebsite">GitHub</a></li>
+            <li><a href="https://www.twitter.com/itKindOfWorks">Twitter</a></li>
+            <li><a href="mailto:mecum.cole@gmail.com?subject=Sweet Website">Email</a></li>
+        </ul>
+        <a href="/booga" class="pull-right">Back to top</a>
     </div>
+</footer>
 
-</div>
-    <footer>
-        <div class="container">
-
-            <ul class="list-inline">
-                <li><a href="https://www.linkedin.com/in/cdmecum">LinkedIn</a></li>
-                <li><a href="https://github.com/DeusEx-Machina/PersonalWebsite">GitHub</a></li>
-                <li><a href="https://www.twitter.com/itKindOfWorks">Twitter</a></li>
-                <li><a href="mailto:mecum.cole@gmail.com?subject=Sweet Website">Email</a></li>
-            </ul>
-            <a href="/booga" class="pull-right">Back to top</a>
-        </div>
-    </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="dist/bootstrap.min.js"></script>
-    <script src="dist/app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="dist/bootstrap.min.js"></script>
+<script src="dist/app.js"></script>
 
 </body>
 </html>

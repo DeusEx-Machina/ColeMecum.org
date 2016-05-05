@@ -5,19 +5,19 @@
  * Created by TheTower on 4/15/2016.
  */
 var gulp = require('gulp');
-sass = require('gulp-sass');
-uglify = require('gulp-uglify');
-plumber = require('gulp-plumber');
-imagemin = require('gulp-imagemin');
-prefix = require('gulp-autoprefixer');
-changed = require('gulp-changed');
-uncss = require('gulp-uncss');
-browserSync = require('browser-sync');
+    sass = require('gulp-sass');
+    uglify = require('gulp-uglify');
+    plumber = require('gulp-plumber');
+    imagemin = require('gulp-imagemin');
+    prefix = require('gulp-autoprefixer');
+    changed = require('gulp-changed');
+    uncss = require('gulp-uncss');
+    browserSync = require('browser-sync');
 
 
 
 // variables
-var JS = ['src/js/**/*.js'];
+var JS   = ['src/js/**/*.js'];
 var SCSS = ['src/_scss/**/*.scss'];
 var DEST = 'dist/';
 
