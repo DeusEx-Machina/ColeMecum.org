@@ -184,8 +184,20 @@ body {
 footer {
   display: flex;
   justify-content: space-between;
-  position: relative;
-  top: 0;
-  padding-bottom: 20px; }
+  padding: 20px 0;
+  background-color: lightgray;
+  border-top: 1px solid #4b4848; }
   footer ul {
     display: inline; }
+
+#etta {
+  height: 500px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #355069; }
+
+.caption {
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 20px; }

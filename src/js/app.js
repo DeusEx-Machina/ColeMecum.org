@@ -523,7 +523,8 @@
 $(window).scroll(function () {
     //current scrolling position
     var wScroll = $(this).scrollTop();
-    if (wScroll >  $('#section2').offset().top - $(window).height()) {
+    console.log(wScroll)
+    if (wScroll >  $('#section2').offset().top - $(window).height() && wScroll < 664) {
         $('#section1').css({'top': wScroll});
         $('#section2, #section3, #section4, #section5, footer').css({'top': -wScroll/2});
 
