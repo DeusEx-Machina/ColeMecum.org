@@ -1,9 +1,3 @@
-/**
- * Created by TheTower on 4/23/2016.
- */
-/**
- * Created by TheTower on 4/15/2016.
- */
 var gulp = require('gulp');
     sass = require('gulp-sass');
     uglify = require('gulp-uglify');
@@ -54,7 +48,6 @@ gulp.task('styles', function(){
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['styles'], function() {
-
     browserSync.init({
         server: "./"
     });
@@ -63,9 +56,6 @@ gulp.task('serve', ['styles'], function() {
     gulp.watch( JS, ['scripts']);
     gulp.watch("*.html").on('change', browserSync.reload);
 });
-
-
-
 
 //Watches files for changes
 gulp.task('watch', function(){
@@ -76,4 +66,4 @@ gulp.task('watch', function(){
 });
 
 //put all gulp tasks in array below
-gulp.task('default', ['scripts', 'watch', 'image'] );
+gulp.task('default', ['scripts', 'styles', 'image', 'watch']);
