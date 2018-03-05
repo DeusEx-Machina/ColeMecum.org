@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Cole Mecum</title>
-    <link rel="stylesheet" type="text/css" href="dist/bootstrap.css"/>
-    <link rel="stylesheet" type="text/css" href="dist/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css"/>
 </head>
 <body id="home">
 <header id="header" class="navbar navbar-inverse navbar-fixed-top" role="banner">
@@ -173,7 +174,7 @@
             <div class="col-sm-12 col-md-4">
                 <div class="ch-item starbuzz">
                     <div class="ch-info ">
-                        <a href="src/starbuzz/index.html" class="button-outline hover-button">Check it out</a>
+                        <a href="starbuzz/index.html" class="button-outline hover-button">Check it out</a>
 
                     </div>
                 </div>
@@ -225,191 +226,28 @@
     </div>
 </div>
 
-
-<!--<script async src="node_modules/react/dist/react.min.js"></script>-->
-<!--<script async src="node_modules/react-dom/dist/react-dom.min.js"></script>-->
-<!--<script async src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>-->
-<!--<div id="section5">-->
-    <!--<div class="container">-->
-        <!--<div class="col-md-12 stripe">-->
-            <!--<h2 class="web-title">React.js</h2>-->
-            <!--<p>Here is an example of some simple Components I have created using React! Looking forward to doing a lot-->
-                <!--more with this library in the future.</p>-->
-        <!--</div>-->
-
-        <!--<div id="container">-->
-
-            <!--<p>-->
-                <!--If you can see this, React is <strong>not</strong> working right.-->
-                <!--If you checked out the source from GitHub make sure to run <code>grunt</code>.-->
-            <!--</p>-->
-        <!--</div>-->
-        <!--<div>-->
-            <!--<h4>React Hello World</h4>-->
-            <!--<p>Dispalys the classic hello world and also the number of seconds the page has been open... just for-->
-                <!--fun.</p>-->
-
-            <!--<script type="text/jsx">-->
-                <!--var ExampleApplication = React.createClass({-->
-                    <!--render: function () {-->
-                        <!--var elapsed = Math.round(this.props.elapsed / 100);-->
-                        <!--var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );-->
-                        <!--var message =-->
-                                <!--'Hello World! This app has been successfully running for ' + seconds + ' seconds.';-->
-
-                        <!--return <p>{message}</p>;-->
-                    <!--}-->
-                <!--});-->
-                <!--var start = new Date().getTime();-->
-                <!--setInterval(function () {-->
-                    <!--ReactDOM.render(-->
-                            <!--<ExampleApplication elapsed={new Date().getTime() - start}/>,-->
-                            <!--document.getElementById('container')-->
-                    <!--);-->
-                <!--}, 50);-->
-            <!--</script>-->
-        <!--</div>-->
-        <!--<hr/>-->
-
-        <!--<div id="container1">-->
-
-            <!--<script type="text/jsx">-->
-
-                <!--var Day = React.createClass({-->
-                    <!--getInitialState: function () {-->
-                        <!--return {active: false};-->
-                    <!--},-->
-                    <!--onClick: function () {-->
-                        <!--this.setState({active: true});-->
-                    <!--},-->
-                    <!--render: function () {-->
-                        <!--return <td className={this.state.active ? 'active': ''}-->
-                                   <!--onClick={this.onClick}>{this.props.date}</td>-->
-                    <!--}-->
-                <!--});-->
-                <!--var Week = React.createClass({-->
-                    <!--renderDays: function () {-->
-                        <!--var days = [];-->
-                        <!--for (var i = 0; i < 7; i++) {-->
-
-                            <!--if (i < this.props.offset) {-->
-                                <!--days.push(<Day date={''} key={i}/>);-->
-                            <!--}-->
-                            <!--else {-->
-                                <!--var date = this.props.start + i - this.props.offset;-->
-                                <!--if (date > 31) {-->
-                                    <!--break;-->
-                                <!--}-->
-                                <!--days.push(<Day date={date} key={i}/>)-->
-                            <!--}-->
-                        <!--}-->
-                        <!--return days-->
-                    <!--},-->
-                    <!--render: function () {-->
-                        <!--return <tr class="week">{this.renderDays()}</tr>-->
-                    <!--}-->
-                <!--});-->
-
-
-
-
-                <!--var Month = React.createClass({-->
-
-                    <!--/**-->
-                     <!--* @param {int} The month number, 0 based-->
-                     <!--* @param {int} The year, not zero based, required to account for leap years-->
-                     <!--* @return {Date[]} List with date objects for each day of the month-->
-                     <!--*/-->
-                    <!--getDaysInMonth: function ( date  ) {-->
-
-                        <!--var weeks = [];-->
-                        <!--var days = [];-->
-                        <!--while (date.getMonth() !== date.getMonth() + 1) {-->
-
-                            <!--if( date.getDay() == 1){-->
-                                <!--//start a new week on monday-->
-                                <!--weeks.push(<Week days={ days } />);-->
-                            <!--}-->
-                            <!--days.push(date);-->
-                            <!--date.setDate(date.getDate() + 1);-->
-                        <!--}-->
-                        <!--console.log(weeks);-->
-                        <!--return weeks;-->
-                    <!--},-->
-
-
-                    <!--render: function () {-->
-                        <!--var weeks = this.getDaysInMonth( new Day());-->
-                        <!--return <tbody class="month">{weeks}</tbody>-->
-                    <!--}-->
-                <!--});-->
-
-                <!--var Header = React.createClass({-->
-                    <!--render: function () {-->
-                        <!--return <thead>-->
-                            <!--<tr>-->
-                                <!--<th>M</th>-->
-                                <!--<th>Tu</th>-->
-                                <!--<th>W</th>-->
-                                <!--<th>Th</th>-->
-                                <!--<th>F</th>-->
-                                <!--<th>Sa</th>-->
-                                <!--<th>Su</th>-->
-                            <!--</tr>-->
-                        <!--</thead>;-->
-                    <!--}-->
-                <!--});-->
-
-
-
-
-                <!--var Datepicker = React.createClass({-->
-                    <!--render: function () {-->
-                        <!--return <div>-->
-                            <!--<h4>React Datepicker</h4>-->
-                            <!--<p>A simple datepicker component built using react.js</p>-->
-                            <!--<table className="table table-striped table-hover">-->
-                                <!--<Header/>-->
-                                <!--<Month/>-->
-                            <!--</table>-->
-                        <!--</div>-->
-                    <!--}-->
-                <!--});-->
-                <!--ReactDOM.render(-->
-                        <!--<Month/>,-->
-                        <!--document.getElementById("container1")-->
-                <!--)-->
-            <!--</script>-->
-        <!--</div>-->
-
-    <!--</div>-->
-
-<!--</div>-->
 <footer>
     <div class="container">
 
         <ul class="list-inline">
             <li><a href="https://www.linkedin.com/in/cdmecum">LinkedIn</a></li>
             <li><a href="https://github.com/DeusEx-Machina/PersonalWebsite">GitHub</a></li>
-            <li><a href="https://www.twitter.com/itKindOfWorks">Twitter</a></li>
             <li><a href="mailto:mecum.cole@gmail.com?subject=Sweet Website">Email</a></li>
         </ul>
         <a href="/booga" class="pull-right">Back to top</a>
     </div>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-<script src="dist/bootstrap.min.js"></script>
-<script src="dist/app.js"></script>
-<!-- Begin Inspectlet Embed Code -->
-<script type="text/javascript" id="inspectletjs">
-    window.__insp = window.__insp || [];
-    __insp.push(['wid', 775994138]);
-    (function() {
-        function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
-        setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
-    })();
-</script>
-<!-- End Inspectlet Embed Code -->
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
 </body>
+<script src="src/js/app.js"></script>
 </html>

@@ -1,14 +1,11 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "Boilerplate project set up to my likings so I don't have to configure everything whenever I want to make a new website. ",
-  "main": "gruntfile.js",
+  "description": "My own personal website",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "Html5-Boilerplate"
-  ],
   "author": "Cole Mecum",
   "license": "ISC",
   "devDependencies": {
@@ -30,8 +27,6 @@
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.3",
     "karma-jasmine": "^0.3.8",
-    "karma-phantomjs-launcher": "^1.0.0",
-    "react": "^15.0.2",
-    "react-dom": "^15.0.2"
+    "karma-phantomjs-launcher": "^1.0.0"
   }
 }

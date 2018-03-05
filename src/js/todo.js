@@ -19,8 +19,13 @@ AngularDemo.controller('snakeCtrl', ['$scope', function($scope){
     //create gameboard
     $scope.gameBoard = function(){
         //add in the rows
-        for(var i = 0; i < $scope.gameSize; i++){$('#gameBoard').appendChild("<tr></tr>");
-            for(var j=0; j<$scope.gameSize; j++){$('#gameBoard, td')[i].appendChild("<td id=" + i + "," + j +"></td>");}}}
+        for(var i = 0; i < $scope.gameSize; i++) {
+            $('#gameBoard').appendChild("<div class='row'></div>");
+            for(var j=0; j<$scope.gameSize; j++){
+                $('#gameBoard', '.row')[i].appendChild("<div class='col-sm-1 cell'></div>");
+            }
+        }
+    };
 
     $scope.newGame = function(){
         //reset to base values
@@ -31,4 +36,4 @@ AngularDemo.controller('snakeCtrl', ['$scope', function($scope){
         //instanstiate game board()
         $scope.gameBoard();
     }
-}])
+}]);
