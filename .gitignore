@@ -1,4 +1,11 @@
-/node_modules
+node_modules/
+.idea/
+dist/
+
+
+
+
+
 #################
 ## Eclipse
 #################
@@ -15,7 +22,6 @@ local.properties
 .classpath
 .settings/
 .loadpath
-
 # External tool builders
 .externalToolBuilders/
 
