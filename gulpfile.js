@@ -7,9 +7,6 @@ var gulp = require('gulp');
     changed = require('gulp-changed');
     uncss = require('gulp-uncss');
     browserSync = require('browser-sync');
-
-
-
 // variables
 var JS   = ['src/js/**/*.js'];
 var SCSS = ['src/_scss/**/*.scss'];
@@ -21,17 +18,17 @@ gulp.task('scripts', function(){
     return gulp.src( JS )
         .pipe( plumber() )
         .pipe( uglify() )
-        .pipe( gulp.dest( DEST ) )
+        .pipe( gulp.dest( './dist/js/' ) )
         .pipe( browserSync.reload( {stream:true, once:true }));
 
 });
 
 //compress those images
 gulp.task('image', function(){
-    return gulp.src('img/*')
+    return gulp.src('./src/img/**/*')
         .pipe( plumber() )
-        .pipe( imagemin )
-        .pipe( gulp.dest('img/'))
+        .pipe( imagemin() )
+        .pipe( gulp.dest('./dist/img/'))
 });
 
 //everything scss related goes here
@@ -42,7 +39,7 @@ gulp.task('styles', function(){
         .pipe( sass( {
             style: 'compressed'}
         ))
-        .pipe( gulp.dest( DEST ))
+        .pipe( gulp.dest( DEST + 'css/' ))
         .pipe( browserSync.reload({stream:true}));
 });
 
@@ -57,13 +54,5 @@ gulp.task('serve', ['styles'], function() {
     gulp.watch("*.html").on('change', browserSync.reload);
 });
 
-//Watches files for changes
-gulp.task('watch', function(){
-    gulp.watch( JS, ['scripts'] ).on('change',browserSync.reload);
-    gulp.watch( SCSS, ['styles'] ).on('change',browserSync.reload);
-    gulp.watch( 'img/*', ['image'] ).on('change',browserSync.reload);
-    gulp.watch( '*.html').on('change',browserSync.reload);
-});
-
 //put all gulp tasks in array below
-gulp.task('default', ['scripts', 'styles', 'image', 'watch']);
+gulp.task('default', ['scripts', 'styles', 'image']);
