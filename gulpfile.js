@@ -9,7 +9,7 @@ var gulp = require('gulp');
     browserSync = require('browser-sync');
 // variables
 var JS   = ['./src/**/*.js'];
-var SCSS = ['./src/scss/main.scss', './src/scss/**/*.js'];
+var SCSS = ['./src/scss/main.scss'];
 
 
 //Uglifies js and outputs to the dist directory
@@ -48,7 +48,7 @@ gulp.task('serve', ['styles'], function() {
         server: "./"
     });
 
-    gulp.watch( SCSS, ['styles']);
+    gulp.watch( ['./src/scss/**/*.scss'], ['styles']);
     gulp.watch( JS, ['scripts']);
     gulp.watch("*.html").on('change', browserSync.reload);
 });
