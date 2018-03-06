@@ -1,0 +1,86 @@
+#section1 {
+  overflow: hidden;
+  background: $color_gravel_approx;
+  background-size: cover;
+  background-image: $url_3;
+  height: 580px;
+  position: relative;
+  padding-top: 150px;
+  h1 {
+	color: $white;
+	text-shadow: 1px 1px 1px $black_50;
+  }
+}
+
+#section2, #section4 {
+  background-color: $white;
+  position: relative;
+  top: 0;
+  padding: 10px 0 20px;
+  .logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-flow: row;
+	padding-top: 30px;
+	padding-bottom: 30px;
+  }
+  .skills-logo {
+	justify-content: space-between;
+	padding: 10px;
+	width: auto;
+	img {
+	  height: 200px;
+	  width: auto;
+	}
+  }
+  #featured-logo {
+	margin-top: -100px;
+	max-height: 360px;
+	height: 100%;
+	img {
+	  height: 350px;
+	}
+  }
+}
+
+#section3, #section5 {
+  position: relative;
+  background: $color_lynch_approx;
+  background: linear-gradient(top, $color_san_juan_approx 0, $color_lynch_approx 100%);
+  padding-top: 45px;
+  padding-bottom: 70px;
+  
+  h2.web-title {
+	color: white;
+	margin-top: 0;
+	padding-bottom: 30px;
+	text-shadow: 0px 1px 1px $black_50;
+	&:before, &:after {
+	  border-bottom: 1px solid white;
+	  margin-top: 7px;
+	}
+	&:after {
+	  right: 0;
+	}
+	&:before {
+	  left: 0;
+	}
+  }
+  h3, a {
+	color: #FFF30D;
+	text-shadow: 0px 1px 1px $black_50;
+  }
+  p, a.button-outline {
+	color: whitesmoke;
+	font-size: 16px;
+	text-shadow: 0px .5px, 5px $black_50;
+	
+  }
+}
+
+#section4 {
+  position: relative;
+  top: 0;
+  padding-top: 30px;
+}

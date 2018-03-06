@@ -1,0 +1,12 @@
+.navbar-inverse {
+  color: $white;
+  background-color: $color_black_15_approx;
+  border: none;
+  .navbar-nav > li > a {
+	color: $color_wild_sand_approx;
+	&:hover {
+	  text-shadow: 1px 1px 1px $black_50;
+	  text-decoration: underline;
+	}
+  }
+}

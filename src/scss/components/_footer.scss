@@ -1,0 +1,10 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  background-color: lightgray;
+  border-top: 1px solid $color_gravel_approx;
+  ul {
+	display: inline;
+  }
+}

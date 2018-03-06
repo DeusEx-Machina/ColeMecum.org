@@ -8,9 +8,8 @@ var gulp = require('gulp');
     uncss = require('gulp-uncss');
     browserSync = require('browser-sync');
 // variables
-var JS   = ['src/js/**/*.js'];
-var SCSS = ['src/_scss/**/*.scss'];
-var DEST = 'dist/';
+var JS   = ['./src/**/*.js'];
+var SCSS = ['./src/scss/main.scss', './src/scss/**/*.js'];
 
 
 //Uglifies js and outputs to the dist directory
@@ -39,7 +38,7 @@ gulp.task('styles', function(){
         .pipe( sass( {
             style: 'compressed'}
         ))
-        .pipe( gulp.dest( DEST + 'css/' ))
+        .pipe( gulp.dest( './dist/css/' ))
         .pipe( browserSync.reload({stream:true}));
 });
 
