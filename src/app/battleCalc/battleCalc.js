@@ -1,51 +1,10 @@
 'use strict';
 
-var battleCalc = angular.module('battleCalc', ['ngRoute']);
-
-battleCalc.config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.
-        when('#/', {templateUrl: 'partials/battleCalc.html', controller: 'battleCalc'}).
-        when('/angular-js', {templateUrl: "partials/angular-js.html", controller: 'todoCtrl'}).
-        when('/aboutme', {templateUrl: "partials/aboutme.html", controller: 'viewCtrl'}).
-        when('/python', {templateUrl: "partials/python.html", controller: 'viewCtrl'}).
-        when('/Java', {templateUrl: "partials/java.html", controller: 'viewCtrl'}).
-        when('/websiteList', {templateUrl: "partials/websiteList.html", controller: 'viewCtrl'}).
-        otherwise({templateUrl: "partials/battleCalc.html", controller: 'battleCalc'})
-    }])
-
-    //view controller
-    .controller('viewCtrl', ['$scope', '$location', '$log',
-        function ($scope, $location, $log) {
-            $log.info($location.path());
-        }]);
+var battleCalc = angular.module('angularDemo.battleCalc', [''])
 
 
-//controller for the To-do widget view
-battleCalc.controller('todoCtrl', ['$scope', function ($scope) {
-    $scope.getTotalTodos = function () {
-        return $scope.todos.length
-    };
 
-    $scope.todos = [
-        {text: "make a website", done: true},
-        {text: 'Learn AngularJS', done: true},
-        {text: 'build an app', done: true},
-        {text: "make money off said app", done: false}];
 
-    $scope.addTodo = function () {
-        $scope.todos.push({text: $scope.formTodoText, done: false});
-        $scope.formTodoText = '';
-    };
-
-    $scope.clearCompleted = function () {
-        //todo either implement underscore or make a custom filter function
-        var newTodo = [];
-        for (var i = 0; i < $scope.todos.length; i++) {
-            if (!$scope.todos[i].done)
-                newTodo.push($scope.todos[i]);
-        }
-    }
-}]);
 
 
 battleCalc.controller('battleCalc', ['$scope', '$http', function ($scope, $http) {

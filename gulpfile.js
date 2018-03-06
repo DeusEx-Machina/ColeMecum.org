@@ -8,7 +8,7 @@ var gulp = require('gulp');
     uncss = require('gulp-uncss');
     browserSync = require('browser-sync');
 // variables
-var JS   = ['./src/**/*.js'];
+var JS   = ['./src/app/angular/app.js'];
 var SCSS = ['./src/scss/main.scss'];
 
 
