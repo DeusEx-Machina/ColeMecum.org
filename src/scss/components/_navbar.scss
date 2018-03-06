@@ -1,0 +1,15 @@
+.navbar-dark {
+  background-color: black;
+  height: 7vh;
+}
+
+.navbar-collapse {
+  background-color: black;
+  position: fixed;
+  height: 93vh;
+  top: 7vh;
+  left: 0;
+  .navbar-nav{
+    padding:20px;
+  }
+}
